@@ -1,0 +1,47 @@
+@media only screen and (max-width: 800px) {
+    .splash-img-top {
+        top: 15%;
+        left: 25%;
+    }
+}
+
+// For desktops with a fairly low height
+@media only screen and (max-height: 800px) and (min-width: 800px) {
+    .container {
+        overflow: hidden;
+    }
+
+    .foreground-img {
+        bottom: 0;
+    }
+}
+
+@media only screen and (max-width: $mobile_screen_size) {
+    #right-fog {
+        max-width: $static_right_fog_width;
+    }
+
+    #right-mountain {
+        max-width: $static_right_mountain_width;
+    }
+
+    #left-mountain-fade {
+        max-width: $static_left_mountain_fade_width;
+    }
+
+    #left-mountain {
+        max-width: $static_left_mountain_width;
+    }
+
+    #left-cloud-mountain {
+        max-width: $static_left_cloud_mountain_width;
+    }
+
+    #right-bg-fog {
+        max-width: $static_right_background_fog_width;
+    }
+
+    #left-bg-fog {
+        max-width: $static_left_background_fog_width;
+    }
+}

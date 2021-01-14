@@ -1,0 +1,132 @@
+.project-information-container {
+    padding-left: 10vw;
+}
+
+.project-title {
+    font-weight: bolder;
+    color: $text_accent;
+    font-size: $header_text_size;
+}
+
+.description-container {
+    width: 44vw;
+}
+
+.project-information {
+    color: $text_accent;
+    margin-top: 2vh;
+    font-size: $body_text_size;
+}
+
+.project-date {
+    font-weight: bold;
+}
+
+.work-container {
+    @include row;
+    align-content: space-around;
+    flex-wrap: wrap;
+    padding: 10vw 10vw 0 10vw;
+}
+
+.work-hero {
+    flex-grow: 2;
+    flex-basis: 100%;
+}
+
+.work-image {
+    width: 100%;
+}
+
+.rounded-image {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.work-subimage {
+    flex-grow: 1;
+    flex-basis: 50%;
+    margin-top: 5vw;
+}
+
+.work-footer {
+    flex-shrink: 0;
+    margin-top: 10vw;
+    width: 100%;
+}
+
+.work-footer-wave {
+    width: 100%;
+    z-index: -1;
+}
+
+.project-link-container {
+    @include row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    padding: 0 10vw 0 10vw;
+}
+
+.project-link {
+    text-decoration: none;
+    user-select: none;
+    font-weight: 200;
+    color: $text_accent;
+    font-size: $nav_link_text_size;
+    transition: $nav_expansion_duration;
+    transition-timing-function: ease-in-out;
+}
+
+.project-link:hover {
+    color: $text_selected;
+    transition: $text_selection_duration;
+}
+
+.wave-group {
+    width: 100%;
+    position: absolute;
+    margin-top: 10vw;
+    z-index: -1;
+}
+
+.wave-container {
+    bottom: 0;
+    position: absolute;
+}
+
+#next-link {
+    align-self: flex-end;
+}
+
+#footer-wave-left {
+    left: 0;
+    width: 50vw;
+}
+
+#footer-wave-right {
+    right: 0;
+    width: 70vw;
+}
+
+@media only screen and (min-width: 1080px) {
+    .subimage-left {
+        padding-right: 2.5vw;
+    }
+
+    .subimage-right {
+        padding-left: 2.5vw;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .work-subimage {
+        flex-grow: 1;
+        flex-basis: 100%;
+    }
+
+    .description-container {
+        width: 100%;
+        padding-right: 10vw;
+    }
+}

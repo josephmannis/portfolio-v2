@@ -1,0 +1,83 @@
+// Breakpoints
+$mobile_screen_size: 800px;
+
+// Do not inlcude units.
+$min_screen_size: 300;
+$min_screen_size_px: 300px;
+$max_screen_size: 3840;
+
+
+// Styles // 
+$text_accent: #e9dbc3;
+$text_main: #fff;
+$text_selected: #D56E7F;
+$body_background: #000033;
+$body_light: #151E7A;
+
+// Typography
+$body_text_min_val: 10;
+$body_text_min_px: 10px;
+$body_text_max_val: 36;
+$body_text_size: scale_value($body_text_min_val, $body_text_min_px, $body_text_max_val);
+
+$header_text_min_val: 72;
+$header_text_min_px: 72px;
+$header_text_max_val: 240;
+$header_text_size: scale_value($header_text_min_val, $header_text_min_px, $header_text_max_val);
+
+$work_link_text_size: 13vw;
+
+$nav_link_text_min_val: 10;
+$nav_link_text_min_px: 10px;
+$nav_link_text_max_val: 36;
+$nav_link_text_size: scale_value($nav_link_text_min_val, $nav_link_text_min_px, $nav_link_text_max_val);
+$nav_hamburger_link_size: 13vw;
+
+$index_text_header_min_val: 48;
+$index_text_header_min_px: 48px;
+$index_text_header_max_val: 72;
+$index_text_header_size: scale_value($index_text_header_min_val, $index_text_header_min_px, $index_text_header_max_val);
+
+$index_text_subheader_min_val: 24;
+$index_text_subheader_min_px: 24px;
+$index_text_subheader_max_val: 60;
+$index_text_subheader_size: scale_value($index_text_subheader_min_val, $index_text_subheader_min_px, $index_text_subheader_max_val);
+
+// Sizes // 
+// Landscape
+$right_fog_width: 78vw;
+$right_mountain_width: 56vw;
+$left_mountain_fade_width: 40vw;
+$left_mountain_width: 79vw;
+$left_cloud_mountain_width: 74vw;
+$right_background_fog_width: 46vw;
+$left_background_fog_width: 60vw;
+
+$static_right_fog_width: 1496px;
+$static_right_mountain_width: 1082px;
+$static_left_mountain_fade_width: 764px;
+$static_left_mountain_width: 1524px;
+$static_left_cloud_mountain_width: 1414px;
+$static_right_background_fog_width: 856px;
+$static_left_background_fog_width: 1162px;
+
+// Nav Icons
+$nav_icon_size: 2vw;
+$nav_icon_expanded: 2.5vw;
+$nav_icon_margin: 1vw;
+
+// Margins
+$border_margin: 7vh;
+
+// Animations //
+// Sun
+$ring_one_rotation_duration: 60s;
+$ring_two_rotation_duration: 45s;
+$ring_three_rotation_duration: 30s;
+$sun_piece_ease_duration: 2s;
+
+// Text selection
+$text_selection_duration: .2s;
+
+// Nav
+$nav_expansion_duration: .1s;
