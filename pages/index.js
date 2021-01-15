@@ -1,57 +1,77 @@
 import GlobalHead from "../components/head";
 import Navigation from "../components/nav";
 import { Client } from "../prismic-configuration";
-import Image from "next/image";
 
 export default function Home({ doc }) {
     return (
         <div className="background-gradient landscape-container">
             <GlobalHead />
             <Navigation />
-            <div className="sun splash-img splash-img-top splash-img-right">
-                <div className="sun-piece" id="bg-sun">
-                    <Image layout="fill" src="/images/splash/bg_09_base.svg" />
-                </div>
-                <div className="sun-piece sun-ring" id="sun-ring-one">
-                    <Image layout="fill" src="/images/splash/bg_09_ring.svg" />
-                </div>
-                <div className="sun-piece sun-ring" id="sun-ring-two">
-                    <Image layout="fill" src="/images/splash/bg_09_ring.svg" />
-                </div>
-                <div className="sun-piece sun-ring" id="sun-ring-three">
-                    <Image layout="fill" src="/images/splash/bg_09_ring.svg" />
-                </div>
+            <div className="splash-img splash-img-top splash-img-right">
+                <img
+                    className="sun-piece"
+                    src={require("images/splash/bg_09_base.svg")}
+                    id="bg-sun"
+                />
+                <img
+                    className="sun-piece sun-ring"
+                    src={require("images/splash/bg_09_ring.svg")}
+                    id="sun-ring-one"
+                />
+                <img
+                    className="sun-piece sun-ring"
+                    src={require("images/splash/bg_09_ring.svg")}
+                    id="sun-ring-two"
+                />
+                <img
+                    className="sun-piece sun-ring"
+                    src={require("images/splash/bg_09_ring.svg")}
+                    id="sun-ring-three"
+                />
             </div>
-            <div className="splash-img splash-img-right" id="right-bg-fog">
-                <Image layout="fill" src="/images/splash/bg_08.svg" />
-            </div>
-            <div className="splash-img splash-img-left" id="left-bg-fog">
-                <Image layout="fill" src="/images/splash/bg_07.svg" />
-            </div>
-            <div className="splash-img splash-img-left">
-                <Image layout="fill" src="/images/splash/bg_06.svg" />
-            </div>
-            <div
+            <img
+                className="splash-img splash-img-right"
+                src={require("images/splash/bg_08.svg")}
+                id="right-bg-fog"
+            />
+            <img
                 className="splash-img splash-img-left"
+                src={require("images/splash/bg_07.svg")}
+                id="left-bg-fog"
+            />
+            <img
+                className="splash-img splash-img-left"
+                src={require("images/splash/bg_06.svg")}
+            />
+            <img
+                className="splash-img splash-img-left"
+                src={require("images/splash/bg_05.svg")}
                 id="left-cloud-mountain"
-            >
-                <Image layout="fill" src="/images/splash/bg_05.svg" />
-            </div>
-            <div className="splash-img splash-img-left" id="left-mountain">
-                <Image layout="fill" src="/images/splash/bg_04.svg" />
-            </div>
-            <div className="splash-img splash-img-left" id="left-mountain-fade">
-                <Image layout="fill" src="/images/splash/bg_03.svg" />
-            </div>
-            <div className="splash-img splash-img-right" id="right-mountain">
-                <Image layout="fill" src="/images/splash/bg_02.svg" />
-            </div>
-            <div className="splash-img splash-img-right" id="right-fog">
-                <Image layout="fill" src="/images/splash/bg_01.svg" />
-            </div>
-            <div className="splash-img foreground-img">
-                <Image src="/images/splash/bg_foreground.svg" layout="fill" />
-            </div>
+            />
+            <img
+                className="splash-img splash-img-left"
+                src={require("images/splash/bg_04.svg")}
+                id="left-mountain"
+            />
+            <img
+                className="splash-img splash-img-left"
+                src={require("images/splash/bg_03.svg")}
+                id="left-mountain-fade"
+            />
+            <img
+                className="splash-img splash-img-right"
+                src={require("images/splash/bg_02.svg")}
+                id="right-mountain"
+            />
+            <img
+                className="splash-img splash-img-right"
+                src={require("images/splash/bg_01.svg")}
+                id="right-fog"
+            />
+            <img
+                className="splash-img foreground-img"
+                src={require("images/splash/bg_foreground.svg")}
+            />
             <div className="header-text">
                 <h1>Joe Annis</h1>
                 <h2>Designer, Developer, Adventurer.</h2>

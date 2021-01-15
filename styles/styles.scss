@@ -20,8 +20,6 @@ html {
 body {
     font-family: "Work Sans";
     margin: 0px;
-    height: 100%;
-    width: 100%;
 }
 
 h1 {
@@ -77,9 +75,12 @@ img {
 }
 
 .splash-img {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
     user-select: none;
-    height: 100%;
-    width: 100%;
+
     position: absolute;
     bottom: 0;
 }

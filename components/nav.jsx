@@ -4,7 +4,7 @@ const Navigation = () => {
             <div className="nav-group group-home">
                 <img
                     className="nav-icon nav-icon-home"
-                    src="../images/nav/ja_logo.svg"
+                    src={require("images/nav/ja_logo.svg")}
                 />
             </div>
 
