@@ -2,24 +2,22 @@ const Navigation = () => {
     return (
         <header className="nav-container nav-container-home">
             <div className="nav-group group-home">
-                <img
-                    className="nav-icon nav-icon-home"
-                    src={require("images/nav/ja_logo.svg")}
-                />
+                <a href="/">
+                    <img
+                        className="nav-icon nav-icon-home"
+                        src={require("images/nav/ja_logo.svg")}
+                    />
+                </a>
             </div>
 
             <nav className="nav-home">
-                <a
-                    className="nav-link nav-link-home"
-                    href="./work/work.html"
-                    id="work-nav"
-                >
+                <a className="nav-link nav-link-home" href="work" id="work-nav">
                     {" "}
                     work{" "}
                 </a>
                 <a
                     className="nav-link nav-link-home"
-                    href="./about/about.html"
+                    href="about"
                     id="about-nav"
                 >
                     {" "}
