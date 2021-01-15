@@ -1,4 +1,4 @@
-div>a {
+div > a {
     display: inline-block;
     /* You can also add some margins here to make it look prettier */
     zoom: 1;
@@ -6,9 +6,9 @@ div>a {
     /* this fix is needed for IE7- */
 }
 
-div {
-    margin-block-start: 0;
-}
+// div {
+//     margin-block-start: 0;
+// }
 
 .nav-container {
     padding: $border_margin $border_margin 0 $border_margin;
@@ -32,11 +32,10 @@ div {
 
 .nav-container .nav-link {
     margin-left: $border_margin;
-
 }
 
 .nav-link {
-    font-family: 'Work Sans';
+    font-family: "Work Sans";
     font-weight: normal;
     color: $text_main;
     text-decoration: none;
@@ -98,10 +97,10 @@ header .nav-link {
         overflow-y: scroll;
         overflow-x: visible;
         outline: none;
-        -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
-        -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
-        box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
-        background: rgba(0, 0, 51, .9);
+        -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+        box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+        background: rgba(0, 0, 51, 0.9);
     }
 
     .nav-menu div {
@@ -130,10 +129,9 @@ header .nav-link {
     }
 
     @supports (position: fixed) {
-
         .nav-menu,
-        .nav-menu:target+.backdrop,
-        .nav-menu[aria-expanded="true"]+.backdrop {
+        .nav-menu:target + .backdrop,
+        .nav-menu[aria-expanded="true"] + .backdrop {
             position: fixed;
         }
     }
