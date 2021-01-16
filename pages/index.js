@@ -1,11 +1,8 @@
-import GlobalHead from "../components/head";
 import Navigation from "../components/nav";
-import { Client } from "../prismic-configuration";
 
 export default function Home({ doc }) {
     return (
         <div className="background-gradient landscape-container">
-            <GlobalHead />
             <Navigation />
             <div className="splash-img splash-img-top splash-img-right">
                 <img
@@ -78,14 +75,4 @@ export default function Home({ doc }) {
             </div>
         </div>
     );
-}
-
-export async function getStaticProps({ params }) {
-    const client = Client();
-    const doc = await client.getSingle("case_study", null);
-    return {
-        props: {
-            doc,
-        },
-    };
 }

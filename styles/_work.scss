@@ -1,6 +1,5 @@
 @import "./variables.scss";
 
-
 .work-container {
     display: inline-block;
     width: 100%;
@@ -8,17 +7,20 @@
 }
 
 .work-links {
+    display: flex;
+    flex-direction: column;
     padding-left: 11vw;
 }
 
 .work-link {
-    font-family: 'Work Sans';
-    width: 22vw;
+    font-family: "Work Sans";
+    width: 18vw;
     font-weight: bolder;
     color: $text_accent;
     font-size: $work_link_text_size;
     user-select: none;
     text-decoration: none;
+    margin-bottom: 0.5em;
 }
 
 .work-link:hover {
