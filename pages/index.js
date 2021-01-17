@@ -1,6 +1,6 @@
-import Navigation from "../components/nav";
+import Navigation from "components/nav";
 
-export default function Home({ doc }) {
+export default function Home() {
     return (
         <div className="background-gradient landscape-container">
             <Navigation />

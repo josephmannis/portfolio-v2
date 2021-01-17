@@ -1,60 +1,49 @@
 @import "./variables.scss";
 
 .project-information-container {
-    padding-left: 10vw;
     h1,
     h2 {
         font-weight: bolder;
         color: $text_accent;
         font-size: $header_text_size;
     }
+}
+
+.case-study-container {
+    @include row;
+    width: 100%;
+    justify-content: center;
+}
+
+.case-study-content {
+    display: flex;
+    flex-direction: column;
+    max-width: min(50vw, 980px);
     p,
-    a {
+    a,
+    ul,
+    ol {
         color: $text_accent;
         margin-top: 2vh;
         font-size: $body_text_size;
     }
+    a {
+        font-weight: bolder;
+    }
 }
 
-.project-title {
-    font-weight: bolder;
-    color: $text_accent;
-    font-size: $header_text_size;
+.study-section {
+    margin-top: 3em;
 }
 
 .description-container {
-    width: 44vw;
+    & .nav-link {
+        margin-right: 1em;
+    }
 }
 
 .project-date {
     font-weight: bold;
-}
-
-.work-container {
-    @include row;
-    align-content: space-around;
-    flex-wrap: wrap;
-    padding: 10vw 10vw 0 10vw;
-}
-
-.work-hero {
-    flex-grow: 2;
-    flex-basis: 100%;
-}
-
-.work-image {
-    width: 100%;
-}
-
-.rounded-image {
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.work-subimage {
-    flex-grow: 1;
-    flex-basis: 50%;
-    margin-top: 5vw;
 }
 
 .work-footer {
@@ -73,7 +62,7 @@
     justify-content: space-between;
     align-items: flex-end;
     height: 100%;
-    padding: 0 10vw 0 10vw;
+    padding-bottom: 3em;
 }
 
 .project-link {
@@ -94,8 +83,7 @@
 .wave-group {
     width: 100%;
     position: absolute;
-    margin-top: 10vw;
-    z-index: -1;
+    left: 0;
 }
 
 .wave-container {
@@ -118,23 +106,7 @@
 }
 
 @media only screen and (min-width: 1080px) {
-    .subimage-left {
-        padding-right: 2.5vw;
-    }
-
-    .subimage-right {
-        padding-left: 2.5vw;
-    }
 }
 
 @media only screen and (max-width: 1080px) {
-    .work-subimage {
-        flex-grow: 1;
-        flex-basis: 100%;
-    }
-
-    .description-container {
-        width: 100%;
-        padding-right: 10vw;
-    }
 }

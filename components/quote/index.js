@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const Quote = () => {
-    return <></>;
+    return <>quote</>;
 };
 
 export default Quote;

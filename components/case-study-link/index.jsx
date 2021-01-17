@@ -4,7 +4,7 @@ import Link from "next/link";
 const CaseStudyLink = ({ title, url }) => {
     return (
         <Link href={url}>
-            <a className="work-link">{title}</a>
+            <a className="project-link">{title}</a>
         </Link>
     );
 };

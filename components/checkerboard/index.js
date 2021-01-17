@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const Checkerboard = () => {
-    return <></>;
+    return <>checkerboard</>;
 };
 
 export default Checkerboard;

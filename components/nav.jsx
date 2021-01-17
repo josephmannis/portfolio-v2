@@ -15,14 +15,12 @@ const Navigation = () => {
             <nav className="nav-home">
                 <Link href="work">
                     <a className="nav-link nav-link-home" id="work-nav">
-                        {" "}
-                        work{" "}
+                        work
                     </a>
                 </Link>
                 <Link href="about">
                     <a className="nav-link nav-link-home" id="about-nav">
-                        {" "}
-                        about{" "}
+                        about
                     </a>
                 </Link>
                 <a
@@ -31,8 +29,7 @@ const Navigation = () => {
                     target="_blank"
                     id="resume-nav"
                 >
-                    {" "}
-                    resume{" "}
+                    resume
                 </a>
             </nav>
             <Link href="#nav-toggle">

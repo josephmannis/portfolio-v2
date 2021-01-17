@@ -1,9 +1,9 @@
 import { fetchCaseStudies } from "api/case-study";
-import { getStudyByUID } from "../api/case-study";
 import { RichText, Link, Date } from "prismic-reactjs";
 import util from "util";
 import PropTypes from "prop-types";
-import CaseStudySection from "../../components/case-study-section";
+import CaseStudySection from "components/case-study-section";
+import CaseStudyFooter from "components/case-study-footer";
 
 const CaseStudy = ({
     title,
@@ -14,80 +14,65 @@ const CaseStudy = ({
     repoLink,
     liveLink,
     body,
+    next,
+    previous,
     role,
 }) => {
     const projectDate = Date(startDate);
     return (
         <div className="main-content-container">
-            <div className="project-information-container">
-                <RichText render={title} />
-                <div className="description-container">
-                    <p className="project-information project-date">
-                        {projectDate &&
-                            `${projectDate.toLocaleString("default", {
-                                month: "long",
-                            })} 
+            <div className="case-study-container">
+                <div className="case-study-content">
+                    <div className="project-information-container">
+                        <RichText render={title} />
+                        <div className="description-container">
+                            <p className="project-information project-date">
+                                {projectDate &&
+                                    `${projectDate.toLocaleString("default", {
+                                        month: "long",
+                                    })} 
                         ${projectDate.getFullYear()} |`}{" "}
-                        {RichText.asText(technologies)}
-                    </p>
-                </div>
-                <div className="description-container">
-                    <RichText render={description} />
-                </div>
-                <div className="description-container">
-                    {repoLink && (
-                        <a className="nav-link" href={Link.url(repoLink)}>
-                            {" "}
-                            project repo{" "}
-                        </a>
-                    )}
-                    {liveLink && (
-                        <a className="nav-link" href={Link.url(liveLink)}>
-                            {" "}
-                            live site{" "}
-                        </a>
-                    )}
-                    {figmaLink && (
-                        <a className="nav-link" href={Link.url(figmaLink)}>
-                            {" "}
-                            figma repo{" "}
-                        </a>
-                    )}
+                                {RichText.asText(technologies)}
+                            </p>
+                        </div>
+                        <div className="description-container">
+                            <RichText render={description} />
+                        </div>
+                        <div className="description-container">
+                            {repoLink && (
+                                <a
+                                    className="nav-link"
+                                    href={Link.url(repoLink)}
+                                >
+                                    project repo
+                                </a>
+                            )}
+                            {liveLink && (
+                                <a
+                                    className="nav-link"
+                                    href={Link.url(liveLink)}
+                                >
+                                    live site
+                                </a>
+                            )}
+                            {figmaLink && (
+                                <a
+                                    className="nav-link"
+                                    href={Link.url(figmaLink)}
+                                >
+                                    figma repo
+                                </a>
+                            )}
+                        </div>
+                    </div>
+
+                    {body &&
+                        body.map((section, i) => (
+                            <CaseStudySection key={i} section={section} />
+                        ))}
+                    <CaseStudyFooter next={next} previous={previous} />
                 </div>
             </div>
-
-            <div className="work-container">
-                {body.map((section, i) => (
-                    <CaseStudySection key={i} section={section} />
-                ))}
-            </div>
-
-            <footer className="work-footer">
-                <div className="project-link-container">
-                    <a
-                        href="workload.html"
-                        className="project-link"
-                        id="next-link"
-                    >
-                        next project
-                    </a>
-                </div>
-
-                <div className="wave-group">
-                    <div className="wave-container" id="footer-wave-left">
-                        <img
-                            className="work-footer-wave"
-                            src={require("images/work/template/work-wave-left.svg")}
-                        />
-                    </div>
-                    <div className="wave-container" id="footer-wave-right">
-                        <img
-                            className="work-footer-wave"
-                            src={require("images/work/template/work-wave-right.svg")}
-                        />
-                    </div>
-                </div>
-            </footer>
         </div>
     );
 };
@@ -102,14 +87,25 @@ CaseStudy.propTypes = {
     figmaLink: PropTypes.object,
     repoLink: PropTypes.object,
     role: PropTypes.array,
+    next: PropTypes.string,
+    previous: PropTypes.string,
 };
 
-const getPageLink = (link) => {
+const getWebLink = (link) => {
     return link && link.link_type !== "Any" ? link : null;
 };
 
+const getStudyLink = (uid) => {
+    return uid ? `/work/${encodeURIComponent(uid)}` : null;
+};
+
 export async function getStaticProps({ params }) {
-    const study = await getStudyByUID(params.uid);
+    const allStudies = await fetchCaseStudies();
+    const studyIndex = [...allStudies].findIndex(
+        (val) => val.uid === params.uid
+    );
+    const study = allStudies[studyIndex];
+
     // console.log(util.inspect(study, { depth: null }));
     return {
         props: {
@@ -118,10 +114,12 @@ export async function getStaticProps({ params }) {
             description: study.data.quick_description,
             role: study.data.role,
             startDate: study.data.start_date,
-            liveLink: getPageLink(study.data.live_link),
-            figmaLink: getPageLink(study.data.figma_link),
-            repoLink: getPageLink(study.data.repository_link),
+            liveLink: getWebLink(study.data.live_link),
+            figmaLink: getWebLink(study.data.figma_link),
+            repoLink: getWebLink(study.data.repository_link),
             body: study.data.body,
+            next: getStudyLink(allStudies[studyIndex + 1]?.uid),
+            previous: getStudyLink(allStudies[studyIndex - 1]?.uid),
         },
     };
 }

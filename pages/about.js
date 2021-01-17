@@ -1,10 +1,8 @@
-import GlobalHead from "../components/head";
-import Navigation from "../components/nav";
+import Navigation from "components/nav";
 
 const About = () => {
     return (
         <div className="main-content-container">
-            <GlobalHead />
             <Navigation />
             <div className="about-text-container">
                 <h1 className="about-name"> joe annis </h1>

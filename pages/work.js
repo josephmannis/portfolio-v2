@@ -1,6 +1,5 @@
-import Navigation from "../components/nav";
+import Navigation from "components/nav";
 import PropTypes from "prop-types";
-import CaseStudyLink from "../components/case-study-link";
 import { fetchCaseStudies } from "api/case-study";
 
 export const Work = ({ caseStudies }) => {
@@ -9,7 +8,9 @@ export const Work = ({ caseStudies }) => {
             <Navigation />
             <div className="work-links">
                 {caseStudies.map((study, i) => (
-                    <CaseStudyLink key={i} {...study} />
+                    <Link key={i} href={study.url}>
+                        <a className="work-link">{study.title}</a>
+                    </Link>
                 ))}
                 <div>
                     <a className="work-link" id="archive" href="./archive.html">

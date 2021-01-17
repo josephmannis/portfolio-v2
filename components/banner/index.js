@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const Banner = () => {
-    return <></>;
+    return <>banner</>;
 };
 
 Banner.propTypes = {};
