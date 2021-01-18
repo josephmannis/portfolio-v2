@@ -40,7 +40,8 @@
     a {
         font-weight: bolder;
     }
-    .banner {
+    .banner,
+    .image-grid {
         width: 125%;
         margin-left: -12.5%;
         filter: drop-shadow(0px 0px 40px rgba(36, 0, 255, 0.1));
@@ -154,6 +155,20 @@
     }
 }
 
+.image-grid {
+    @include row;
+    flex-wrap: wrap;
+}
+
+.image-grid-column {
+    flex: 33%;
+    max-width: 33%;
+    padding: 1em;
+    img {
+        width: 100%;
+    }
+}
+
 #next-link {
     align-self: flex-end;
 }
@@ -189,5 +204,17 @@
         .checkerboard-text {
             margin: 1em 0 0 0;
         }
+    }
+
+    .image-grid-column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .image-grid-column {
+        flex: 100%;
+        max-width: 100%;
     }
 }
