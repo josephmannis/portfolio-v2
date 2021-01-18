@@ -133,6 +133,7 @@ export async function getStaticPaths() {
     const studies = await fetchCaseStudies();
     return {
         paths: studies.map((study) => `/work/${study.uid}`),
+        fallback: false,
     };
 }
 
