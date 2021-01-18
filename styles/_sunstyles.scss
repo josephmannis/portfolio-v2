@@ -1,0 +1,62 @@
+#bg-sun {
+    width: 50vw;
+}
+
+.sun-ring {
+    width: 50vw;
+    top: 0;
+}
+
+.sun-piece {
+    position: absolute;
+    right: 10vw;
+}
+
+#sun-ring-one {
+    animation: spin_one $ring_one_rotation_duration linear infinite;
+}
+
+#sun-ring-two {
+    animation: spin_two $ring_two_rotation_duration linear infinite;
+}
+
+#sun-ring-three {
+    animation: spin_three $ring_three_rotation_duration linear infinite;
+}
+
+@keyframes spin_one {
+    from {
+        transform: rotate(0deg) translate(-5%) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translate(-5%) rotate(-360deg);
+    }
+}
+
+@keyframes spin_two {
+    from {
+        transform: rotate(0deg) translate(5%) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translate(5%) rotate(-360deg);
+    }
+}
+
+@keyframes spin_three {
+    from {
+        transform: rotate(0deg) translate(-7%) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translate(-7%) rotate(-360deg);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .sun-piece {
+        position: absolute;
+        right: 25vw;
+    }
+}

@@ -1,91 +1,75 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { Client } from "../prismic-configuration";
-
-export default function Home({ doc }) {
-    console.log(doc.data.body);
+export default function Home() {
     return (
-        <div className={styles.container}>
-            <Head>
-                <title>Create Next App</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
-            <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Welcome to <a href="https://nextjs.org">Next.js!</a>
-                </h1>
-
-                <p className={styles.description}>
-                    Get started by editing{" "}
-                    <code className={styles.code}>pages/index.js</code>
-                </p>
-
-                <div className={styles.grid}>
-                    <a href="https://nextjs.org/docs" className={styles.card}>
-                        <h3>Documentation &rarr;</h3>
-                        <p>
-                            Find in-depth information about Next.js features and
-                            API.
-                        </p>
-                    </a>
-
-                    <a href="https://nextjs.org/learn" className={styles.card}>
-                        <h3>Learn &rarr;</h3>
-                        <p>
-                            Learn about Next.js in an interactive course with
-                            quizzes!
-                        </p>
-                    </a>
-
-                    <a
-                        href="https://github.com/vercel/next.js/tree/master/examples"
-                        className={styles.card}
-                    >
-                        <h3>Examples &rarr;</h3>
-                        <p>
-                            Discover and deploy boilerplate example Next.js
-                            projects.
-                        </p>
-                    </a>
-
-                    <a
-                        href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                        className={styles.card}
-                    >
-                        <h3>Deploy &rarr;</h3>
-                        <p>
-                            Instantly deploy your Next.js site to a public URL
-                            with Vercel.
-                        </p>
-                    </a>
-                </div>
-            </main>
-
-            <footer className={styles.footer}>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{" "}
-                    <img
-                        src="/vercel.svg"
-                        alt="Vercel Logo"
-                        className={styles.logo}
-                    />
-                </a>
-            </footer>
+        <div className="background-gradient landscape-container">
+            <div className="splash-img splash-img-top splash-img-right">
+                <img
+                    className="sun-piece"
+                    src={require("images/splash/bg_09_base.svg")}
+                    id="bg-sun"
+                />
+                <img
+                    className="sun-piece sun-ring"
+                    src={require("images/splash/bg_09_ring.svg")}
+                    id="sun-ring-one"
+                />
+                <img
+                    className="sun-piece sun-ring"
+                    src={require("images/splash/bg_09_ring.svg")}
+                    id="sun-ring-two"
+                />
+                <img
+                    className="sun-piece sun-ring"
+                    src={require("images/splash/bg_09_ring.svg")}
+                    id="sun-ring-three"
+                />
+            </div>
+            <img
+                className="splash-img splash-img-right"
+                src={require("images/splash/bg_08.svg")}
+                id="right-bg-fog"
+            />
+            <img
+                className="splash-img splash-img-left"
+                src={require("images/splash/bg_07.svg")}
+                id="left-bg-fog"
+            />
+            <img
+                className="splash-img splash-img-left"
+                src={require("images/splash/bg_06.svg")}
+            />
+            <img
+                className="splash-img splash-img-left"
+                src={require("images/splash/bg_05.svg")}
+                id="left-cloud-mountain"
+            />
+            <img
+                className="splash-img splash-img-left"
+                src={require("images/splash/bg_04.svg")}
+                id="left-mountain"
+            />
+            <img
+                className="splash-img splash-img-left"
+                src={require("images/splash/bg_03.svg")}
+                id="left-mountain-fade"
+            />
+            <img
+                className="splash-img splash-img-right"
+                src={require("images/splash/bg_02.svg")}
+                id="right-mountain"
+            />
+            <img
+                className="splash-img splash-img-right"
+                src={require("images/splash/bg_01.svg")}
+                id="right-fog"
+            />
+            <img
+                className="splash-img foreground-img"
+                src={require("images/splash/bg_foreground.svg")}
+            />
+            <div className="header-text">
+                <h1>Joe Annis</h1>
+                <h2>Designer, Developer, Adventurer.</h2>
+            </div>
         </div>
     );
-}
-
-export async function getStaticProps({ params }) {
-    const client = Client();
-    const doc = await client.getSingle("case_study", null);
-    return {
-        props: {
-            doc,
-        },
-    };
 }

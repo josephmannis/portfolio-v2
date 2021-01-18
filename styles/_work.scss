@@ -1,0 +1,49 @@
+@import "./variables.scss";
+
+.work-container {
+    display: inline-block;
+    width: 100%;
+    background-color: $body_background;
+}
+
+.work-links {
+    display: flex;
+    flex-direction: column;
+    padding-left: 11vw;
+}
+
+.work-link {
+    font-family: "Work Sans";
+    width: 18vw;
+    font-weight: bolder;
+    color: $text_accent;
+    font-size: $work_link_text_size;
+    user-select: none;
+    text-decoration: none;
+    margin-bottom: 0.5em;
+}
+
+.work-link:hover {
+    color: $text_selected;
+    transition: $text_selection_duration;
+}
+
+#archive {
+    color: $body_background;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $text_accent;
+}
+
+#archive:hover {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $text_selected;
+    transition: $text_selection_duration;
+}
+
+@media only screen and (max-width: $mobile_screen_size) {
+    .work-links {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 11vw;
+    }
+}

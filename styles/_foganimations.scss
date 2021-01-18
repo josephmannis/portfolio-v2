@@ -1,0 +1,31 @@
+// Fog animations 
+.fog-container {
+    filter: brightness(100%) contrast(1500%);
+}
+
+.fog-piece {
+    position: absolute;
+
+    filter: blur(20px)
+}
+
+.ball {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 100%;
+    background: black;
+}
+
+#fog-piece-one {}
+
+#fog-piece-two {
+    left: 15vw;
+}
+
+#fog-piece-three {
+    left: 30vw;
+}
+
+#fog-piece-four {
+    left: 45vw;
+}

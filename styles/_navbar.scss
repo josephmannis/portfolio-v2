@@ -1,0 +1,144 @@
+div > a {
+    display: inline-block;
+    /* You can also add some margins here to make it look prettier */
+    zoom: 1;
+    *display: inline;
+    /* this fix is needed for IE7- */
+}
+
+.nav-container {
+    padding: $border_margin $border_margin 0 $border_margin;
+    z-index: 999;
+}
+
+.nav-bar {
+    font-size: $nav_link_text_size;
+}
+
+.nav-icon {
+    width: $nav_icon_size;
+    min-width: 40px;
+    transition: $nav_expansion_duration;
+    transition-timing-function: ease-in-out;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+}
+
+.nav-container .nav-link {
+    margin-left: $border_margin;
+}
+
+.nav-link {
+    font-family: "Work Sans";
+    font-weight: normal;
+    color: $text_main;
+    text-decoration: none;
+    user-select: none;
+}
+
+header .nav-link {
+    font-size: $nav_link_text_size;
+}
+
+.selected-link {
+    color: $text_selected;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: $text_selected;
+    transition: $text_selection_duration;
+}
+
+.nav-group {
+    position: sticky;
+    top: $border_margin;
+    align-self: center;
+    z-index: 999;
+}
+
+#home-nav {
+    display: none;
+}
+
+@media only screen and (min-width: 800px) {
+    .nav-container {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        @include row;
+        justify-content: space-between;
+    }
+
+    #nav-close,
+    #nav-toggle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: $mobile_screen_size) {
+    .nav-group {
+        display: none;
+    }
+
+    .nav-menu {
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        overflow-y: scroll;
+        overflow-x: visible;
+        outline: none;
+        -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+        box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+        background: rgba(0, 0, 51, 0.9);
+    }
+
+    .nav-menu div {
+        @include column;
+        justify-content: center;
+
+        background: $body_light;
+        width: 80vw;
+        height: 100%;
+        border-radius: 0px 160px 160px 0;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 5vw 0 0 5vw;
+        font-weight: bold;
+        text-decoration: none;
+        padding-bottom: 0.25em;
+        font-size: $nav_hamburger_link_size;
+    }
+
+    .nav-menu .nav-close {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    @supports (position: fixed) {
+        .nav-menu,
+        .nav-menu:target + .backdrop,
+        .nav-menu[aria-expanded="true"] + .backdrop {
+            position: fixed;
+        }
+    }
+
+    .nav-link-container {
+        height: 100%;
+        @include column;
+    }
+
+    #home-nav {
+        display: initial;
+    }
+}
