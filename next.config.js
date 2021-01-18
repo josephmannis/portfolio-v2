@@ -6,6 +6,7 @@ module.exports = withOptimizedImages({
         config.resolve.alias.images = path.join(__dirname, "images");
         config.resolve.alias.api = path.join(__dirname, "pages", "api");
         config.resolve.alias.components = path.join(__dirname, "components");
+        config.resolve.alias.types = path.join(__dirname, "types");
         return config;
     },
 });

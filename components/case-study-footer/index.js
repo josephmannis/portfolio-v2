@@ -1,6 +1,6 @@
 import CaseStudyLink from "components/case-study-link";
 
-export const FooterWave = ({ side }) => {
+const FooterWave = ({ side }) => {
     return (
         <div className="work-footer-wave" id={`footer-wave-${side}`}>
             <img src={require(`images/work/template/work-wave-${side}.svg`)} />

@@ -4,7 +4,6 @@ import util from "util";
 import PropTypes from "prop-types";
 import CaseStudySection from "components/case-study-section";
 import CaseStudyFooter from "components/case-study-footer";
-import { FooterWave } from "components/case-study-footer";
 
 const CaseStudy = ({
     title,

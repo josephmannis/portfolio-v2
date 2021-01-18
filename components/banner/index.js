@@ -1,9 +1,7 @@
-import PropTypes from "prop-types";
+import { Image } from "types";
 
-const Banner = () => {
-    return <>banner</>;
-};
+const Banner = ({ src, alt }) => <img className="banner" src={src} alt={alt} />;
 
-Banner.propTypes = {};
+Banner.propTypes = Image;
 
 export default Banner;
