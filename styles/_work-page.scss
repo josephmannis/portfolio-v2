@@ -7,6 +7,7 @@
         color: $text_accent;
         font-size: $header_text_size;
     }
+    margin-bottom: 4em;
 }
 
 .case-study-container {
@@ -19,12 +20,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bolder;
+        color: $text_accent;
+    }
     p,
     a,
     ul,
     ol {
         color: $text_accent;
-        margin-top: 2vh;
+        margin-bottom: 2vh;
         font-size: $body_text_size;
     }
     a {
@@ -43,7 +53,11 @@
 }
 
 .study-section {
-    margin-top: 3em;
+    margin-bottom: 4em;
+}
+
+.study-title {
+    margin-bottom: 2em;
 }
 
 .description-container {

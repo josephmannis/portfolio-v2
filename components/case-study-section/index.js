@@ -4,6 +4,7 @@ import Banner from "components/banner/index";
 import Checkerboard from "components/checkerboard";
 import Quote from "components/quote";
 import ImageGrid from "components/image-grid";
+import { slices } from "types";
 
 const CaseStudySection = ({ section }) => {
     const content = section.primary;
@@ -12,11 +13,11 @@ const CaseStudySection = ({ section }) => {
         console.log(section.slice_type);
 
         switch (section.slice_type) {
-            case "section_title":
+            case slices.title:
                 return <RichText render={content.section_title} />;
-            case "paragraph":
+            case slices.paragraph:
                 return <RichText render={content.paragraph} />;
-            case "checkerboard":
+            case slices.checkerboard:
                 return (
                     <Checkerboard
                         textLeft={content.text_left}
@@ -27,16 +28,16 @@ const CaseStudySection = ({ section }) => {
                         }}
                     />
                 );
-            case "centered_image":
+            case slices.banner:
                 return (
                     <Banner
                         src={content.centered_image.url}
                         alt={content.centered_image.alt}
                     />
                 );
-            case "quote":
+            case slices.quote:
                 return <Quote>{RichText.asText(content.quote_text)}</Quote>;
-            case "three_image_grid":
+            case slices.grid:
                 return (
                     <ImageGrid
                         images={[
@@ -54,7 +55,9 @@ const CaseStudySection = ({ section }) => {
     return (
         <div
             className={
-                section.slice_type === "paragraph" ? "" : "study-section"
+                section.slice_type === slices.title
+                    ? "study-title"
+                    : "study-section"
             }
         >
             {renderNext()}
