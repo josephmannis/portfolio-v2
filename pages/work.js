@@ -1,4 +1,3 @@
-import Navigation from "components/nav";
 import PropTypes from "prop-types";
 import { fetchCaseStudies } from "api/case-study";
 import Link from "next/link";
@@ -6,7 +5,6 @@ import Link from "next/link";
 export const Work = ({ caseStudies }) => {
     return (
         <div className="main-content-container">
-            <Navigation />
             <div className="work-links">
                 {caseStudies.map((study, i) => (
                     <Link key={i} href={study.url}>

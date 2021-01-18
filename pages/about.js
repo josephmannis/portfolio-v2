@@ -1,9 +1,6 @@
-import Navigation from "components/nav";
-
 const About = () => {
     return (
         <div className="main-content-container">
-            <Navigation />
             <div className="about-text-container">
                 <h1 className="about-name"> joe annis </h1>
 

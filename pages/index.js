@@ -1,9 +1,6 @@
-import Navigation from "components/nav";
-
 export default function Home() {
     return (
         <div className="background-gradient landscape-container">
-            <Navigation />
             <div className="splash-img splash-img-top splash-img-right">
                 <img
                     className="sun-piece"

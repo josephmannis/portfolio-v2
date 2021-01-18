@@ -2,13 +2,15 @@ import Link from "next/link";
 
 const Navigation = () => {
     return (
-        <header className="nav-container nav-container-home">
+        <div className="nav-container nav-container-home">
             <div className="nav-group group-home">
                 <Link href="/">
-                    <img
-                        className="nav-icon nav-icon-home"
-                        src={require("images/nav/ja_logo.svg")}
-                    />
+                    <a>
+                        <img
+                            className="nav-icon nav-icon-home"
+                            src={require("images/nav/ja_logo.svg")}
+                        />
+                    </a>
                 </Link>
             </div>
 
@@ -32,15 +34,15 @@ const Navigation = () => {
                     resume
                 </a>
             </nav>
-            <Link href="#nav-toggle">
+            {/* <Link href="#nav-toggle">
                 <a
                     className="backdrop"
                     tabIndex="-1"
                     aria-hidden="true"
                     hidden
                 ></a>
-            </Link>
-        </header>
+            </Link> */}
+        </div>
     );
 };
 

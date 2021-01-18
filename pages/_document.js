@@ -1,4 +1,5 @@
 import Document, { Html, Main, NextScript, Head } from "next/document";
+import Navigation from "../components/nav/nav";
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -19,6 +20,7 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,800,900&display=swap"
                         rel="stylesheet"
                     />
+                    <Navigation />
                 </Head>
 
                 <body>
