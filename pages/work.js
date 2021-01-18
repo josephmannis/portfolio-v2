@@ -1,6 +1,7 @@
 import Navigation from "components/nav";
 import PropTypes from "prop-types";
 import { fetchCaseStudies } from "api/case-study";
+import Link from "next/link";
 
 export const Work = ({ caseStudies }) => {
     return (

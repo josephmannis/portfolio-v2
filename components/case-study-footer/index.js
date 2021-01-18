@@ -1,12 +1,9 @@
 import CaseStudyLink from "components/case-study-link";
 
-const FooterWave = ({ side }) => {
+export const FooterWave = ({ side }) => {
     return (
-        <div className="wave-container" id={`footer-wave-${side}`}>
-            <img
-                className="work-footer-wave"
-                src={require(`images/work/template/work-wave-${side}.svg`)}
-            />
+        <div className="work-footer-wave" id={`footer-wave-${side}`}>
+            <img src={require(`images/work/template/work-wave-${side}.svg`)} />
         </div>
     );
 };
@@ -31,10 +28,8 @@ const CaseStudyFooter = ({ previous, next }) => {
                 )}
             </div>
 
-            <div className="wave-group">
-                <FooterWave side="left" />
-                <FooterWave side="right" />
-            </div>
+            <FooterWave side="left" />
+            <FooterWave side="right" />
         </footer>
     );
 };

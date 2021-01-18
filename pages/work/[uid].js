@@ -4,6 +4,7 @@ import util from "util";
 import PropTypes from "prop-types";
 import CaseStudySection from "components/case-study-section";
 import CaseStudyFooter from "components/case-study-footer";
+import { FooterWave } from "components/case-study-footer";
 
 const CaseStudy = ({
     title,
@@ -20,60 +21,65 @@ const CaseStudy = ({
 }) => {
     const projectDate = Date(startDate);
     return (
-        <div className="main-content-container">
-            <div className="case-study-container">
-                <div className="case-study-content">
-                    <div className="project-information-container">
-                        <RichText render={title} />
-                        <div className="description-container">
-                            <p className="project-information project-date">
-                                {projectDate &&
-                                    `${projectDate.toLocaleString("default", {
-                                        month: "long",
-                                    })} 
+        <>
+            <div className="main-content-container">
+                <div className="case-study-container">
+                    <div className="case-study-content">
+                        <div className="project-information-container">
+                            <RichText render={title} />
+                            <div className="description-container">
+                                <p className="project-information project-date">
+                                    {projectDate &&
+                                        `${projectDate.toLocaleString(
+                                            "default",
+                                            {
+                                                month: "long",
+                                            }
+                                        )} 
                         ${projectDate.getFullYear()} |`}{" "}
-                                {RichText.asText(technologies)}
-                            </p>
+                                    {RichText.asText(technologies)}
+                                </p>
+                            </div>
+                            <div className="description-container">
+                                <RichText render={description} />
+                            </div>
+                            <div className="description-container">
+                                {repoLink && (
+                                    <a
+                                        className="nav-link"
+                                        href={Link.url(repoLink)}
+                                    >
+                                        project repo
+                                    </a>
+                                )}
+                                {liveLink && (
+                                    <a
+                                        className="nav-link"
+                                        href={Link.url(liveLink)}
+                                    >
+                                        live site
+                                    </a>
+                                )}
+                                {figmaLink && (
+                                    <a
+                                        className="nav-link"
+                                        href={Link.url(figmaLink)}
+                                    >
+                                        figma repo
+                                    </a>
+                                )}
+                            </div>
                         </div>
-                        <div className="description-container">
-                            <RichText render={description} />
-                        </div>
-                        <div className="description-container">
-                            {repoLink && (
-                                <a
-                                    className="nav-link"
-                                    href={Link.url(repoLink)}
-                                >
-                                    project repo
-                                </a>
-                            )}
-                            {liveLink && (
-                                <a
-                                    className="nav-link"
-                                    href={Link.url(liveLink)}
-                                >
-                                    live site
-                                </a>
-                            )}
-                            {figmaLink && (
-                                <a
-                                    className="nav-link"
-                                    href={Link.url(figmaLink)}
-                                >
-                                    figma repo
-                                </a>
-                            )}
-                        </div>
-                    </div>
 
-                    {body &&
-                        body.map((section, i) => (
-                            <CaseStudySection key={i} section={section} />
-                        ))}
-                    <CaseStudyFooter next={next} previous={previous} />
+                        {body &&
+                            body.map((section, i) => (
+                                <CaseStudySection key={i} section={section} />
+                            ))}
+                    </div>
                 </div>
             </div>
-        </div>
+            <CaseStudyFooter next={next} previous={previous} />
+        </>
     );
 };
 
