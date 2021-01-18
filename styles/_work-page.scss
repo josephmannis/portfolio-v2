@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 15vh;
     h1,
     h2,
     h3,
@@ -50,7 +51,7 @@
 
 .case-study-content,
 .project-link-container {
-    max-width: min(50vw, 980px);
+    max-width: 680px;
 }
 
 .study-section {
@@ -158,6 +159,7 @@
 .image-grid {
     @include row;
     flex-wrap: wrap;
+    padding: 0 -1em 0 -1em;
 }
 
 .image-grid-column {
@@ -235,11 +237,27 @@
         flex: 50%;
         max-width: 50%;
     }
+
+    .case-study-content,
+    .project-link-container {
+        max-width: 60%;
+    }
 }
 
 @media only screen and (max-width: 680px) {
     .image-grid-column {
         flex: 100%;
         max-width: 100%;
+    }
+
+    .case-study-content,
+    .project-link-container {
+        max-width: 80%;
+
+        .banner,
+        .image-grid {
+            width: 100%;
+            margin-left: 0;
+        }
     }
 }
