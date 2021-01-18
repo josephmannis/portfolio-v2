@@ -169,6 +169,31 @@
     }
 }
 
+.quote {
+    margin: 2em 0 2em 0;
+    p {
+        font-size: $quote_text_size;
+    }
+}
+
+.quote-rule {
+    @include row;
+    align-items: center;
+    hr {
+        width: 50%;
+        opacity: 0.5;
+    }
+}
+
+.quote-image {
+    width: max(5%, 36px);
+    margin: 0 2em 0 2em;
+}
+
+.quote-image-end {
+    transform: rotate(180deg);
+}
+
 #next-link {
     align-self: flex-end;
 }

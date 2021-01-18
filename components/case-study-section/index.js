@@ -36,7 +36,9 @@ const CaseStudySection = ({ section }) => {
                     />
                 );
             case slices.quote:
-                return <Quote>{RichText.asText(content.quote_text)}</Quote>;
+                return (
+                    <Quote text={<RichText render={content.quote_text} />} />
+                );
             case slices.grid:
                 return (
                     <ImageGrid

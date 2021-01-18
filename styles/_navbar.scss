@@ -6,10 +6,6 @@ div > a {
     /* this fix is needed for IE7- */
 }
 
-// div {
-//     margin-block-start: 0;
-// }
-
 .nav-container {
     padding: $border_margin $border_margin 0 $border_margin;
     z-index: 999;
