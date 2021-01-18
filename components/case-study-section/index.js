@@ -21,8 +21,10 @@ const CaseStudySection = ({ section }) => {
                     <Checkerboard
                         textLeft={content.text_left}
                         text={<RichText render={content.checkerboard_text} />}
-                        src={content.checkerboard_image.url}
-                        alt={content.checkerboard_image.alt}
+                        image={{
+                            url: content.checkerboard_image.url,
+                            alt: content.checkerboard_image.alt,
+                        }}
                     />
                 );
             case "centered_image":

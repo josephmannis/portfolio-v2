@@ -105,6 +105,41 @@
     width: 100%;
 }
 
+.checkerboard-text {
+    margin-right: 3em;
+    p {
+        margin: 0;
+    }
+}
+
+.checkerboard-image {
+    width: 100%;
+    height: auto;
+}
+
+.checkerboard-text,
+.checkerboard-image-wrapper {
+    width: 50%;
+}
+
+.checkerboard-left,
+.checkerboard-right {
+    @include row;
+    width: 100%;
+
+    .checkerboard-text {
+        margin: 0 3em 0 0;
+    }
+}
+
+.checkerboard-right {
+    flex-direction: row-reverse;
+
+    .checkerboard-text {
+        margin: 0 0 0 3em;
+    }
+}
+
 #next-link {
     align-self: flex-end;
 }
@@ -123,4 +158,22 @@
 }
 
 @media only screen and (max-width: 1080px) {
+    .checkerboard-text,
+    .checkerboard-image-wrapper {
+        width: 100%;
+    }
+
+    .checkerboard-left,
+    .checkerboard-right {
+        @include column;
+        width: 100%;
+    }
+
+    .checkerboard-right,
+    .checkerboard-left {
+        flex-direction: column-reverse;
+        .checkerboard-text {
+            margin: 1em 0 0 0;
+        }
+    }
 }
