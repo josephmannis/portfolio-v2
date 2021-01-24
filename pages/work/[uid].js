@@ -4,6 +4,7 @@ import util from "util";
 import PropTypes from "prop-types";
 import CaseStudySection from "components/case-study-section";
 import CaseStudyFooter from "components/case-study-footer";
+import Navigation from "../../components/nav";
 
 const CaseStudy = ({
     title,
@@ -21,6 +22,7 @@ const CaseStudy = ({
     const projectDate = Date(startDate);
     return (
         <>
+            <Navigation />
             <div className="main-content-container">
                 <div className="case-study-container">
                     <div className="case-study-content">
