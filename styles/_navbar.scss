@@ -59,7 +59,7 @@ nav .nav-link {
 }
 
 .nav-group {
-    position: fixed;
+    // position: fixed;
     top: $border_margin;
     align-self: center;
     z-index: 999;
@@ -69,7 +69,7 @@ nav .nav-link {
     display: none;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: $mobile_screen_size) {
     .nav-container {
         position: fixed;
         top: 0;
@@ -89,14 +89,13 @@ nav .nav-link {
     }
 
     .nav-menu {
-        position: absolute;
         display: none;
+        position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
         z-index: 999;
-        overflow-y: scroll;
         overflow-x: visible;
         outline: none;
         -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
@@ -108,11 +107,9 @@ nav .nav-link {
     .nav-menu div {
         @include column;
         justify-content: center;
-
-        background: $body_light;
+        text-align: center;
         width: 80vw;
         height: 100%;
-        border-radius: 0px 160px 160px 0;
     }
 
     .nav-menu a {
