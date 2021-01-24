@@ -103,6 +103,11 @@ nav .nav-link {
 }
 
 @media only screen and (max-width: $mobile_screen_size) {
+    .nav-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .nav-group {
         display: none;
     }
