@@ -6,7 +6,6 @@
 @import "./work";
 @import "./about";
 @import "./work-page.scss";
-@import "./homenav";
 
 * {
     box-sizing: border-box;
@@ -166,7 +165,8 @@ img {
 
 @media only screen and (max-width: $mobile_screen_size) {
     .header-text {
-        display: none;
+        margin: 0;
+        padding: 7vh;
     }
 }
 
