@@ -11,6 +11,13 @@
     box-sizing: border-box;
 }
 
+html,
+body,
+#__next {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     font-family: "Work Sans";
     margin: 0px;
@@ -65,8 +72,8 @@ img {
 }
 
 .landscape-container {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .splash-img {
