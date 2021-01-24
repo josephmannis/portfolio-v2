@@ -9,12 +9,12 @@
 .work-links {
     display: flex;
     flex-direction: column;
-    padding-left: 11vw;
+    padding: 0 11vw 0 11vw;
+    margin-top: 15vh;
 }
 
 .work-link {
     font-family: "Work Sans";
-    width: 18vw;
     font-weight: bolder;
     color: $text_accent;
     font-size: $work_link_text_size;
