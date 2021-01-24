@@ -1,5 +1,4 @@
 import Document, { Html, Main, NextScript, Head } from "next/document";
-import Navigation from "../components/nav";
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -20,7 +19,22 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,800,900&display=swap"
                         rel="stylesheet"
                     />
-                    <Navigation />
+                    <meta name="author" content="Joseph Annis" />
+                    <meta
+                        name="description"
+                        content="Porftolio of Joseph Annis"
+                    />
+                    \
+                    <meta name="theme-color" content="#EEB882" />
+                    <meta
+                        name="apple-mobile-web-app-status-bar-style"
+                        content="black-translucent"
+                    />
+                    <meta charSet="UTF-8" />
+                    <meta
+                        httpEquiv="X-UA-Compatible"
+                        content="IE=edge,chrome=1"
+                    />
                 </Head>
 
                 <body>
