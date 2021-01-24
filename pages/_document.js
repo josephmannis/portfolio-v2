@@ -1,5 +1,5 @@
 import Document, { Html, Main, NextScript, Head } from "next/document";
-import Navigation from "../components/nav/nav";
+import Navigation from "../components/nav";
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {

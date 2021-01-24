@@ -34,14 +34,15 @@ const Navigation = () => {
                     resume
                 </a>
             </nav>
-            {/* <Link href="#nav-toggle">
+
+            <Link href="#nav-toggle">
                 <a
                     className="backdrop"
                     tabIndex="-1"
                     aria-hidden="true"
                     hidden
                 ></a>
-            </Link> */}
+            </Link>
         </div>
     );
 };
