@@ -24,7 +24,7 @@ class MyDocument extends Document {
                         name="description"
                         content="Porftolio of Joseph Annis"
                     />
-                    \
+
                     <meta name="theme-color" content="#EEB882" />
                     <meta
                         name="apple-mobile-web-app-status-bar-style"

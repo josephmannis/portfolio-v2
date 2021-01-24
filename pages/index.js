@@ -4,8 +4,7 @@ export default function Home() {
     return (
         <>
             <Navigation />
-            <div className="background-gradient"></div>
-            <div className=" landscape-container">
+            <div className="background-gradient landscape-container">
                 <div className="splash-img splash-img-top splash-img-right">
                     <img
                         className="sun-piece"
