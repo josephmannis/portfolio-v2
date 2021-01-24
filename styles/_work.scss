@@ -9,8 +9,8 @@
 .work-links {
     display: flex;
     flex-direction: column;
-    padding: 0 11vw 0 11vw;
-    margin-top: 15vh;
+    padding: 0 $work_side_padding 0 $work_side_padding;
+    margin-top: $work_top_padding;
 }
 
 .work-link {

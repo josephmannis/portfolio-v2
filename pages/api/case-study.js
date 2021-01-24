@@ -11,3 +11,10 @@ export const fetchCaseStudies = async () => {
 export const getStudyByUID = async (uid) => {
     return await Client().getByUID("case_study", uid);
 };
+
+export const getArchive = async () => {
+    let archive = await Client().query(
+        Prismic.Predicates.at("document.type", "archive")
+    );
+    return archive.results[0];
+};
