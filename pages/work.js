@@ -15,13 +15,11 @@ export const Work = ({ caseStudies }) => {
                         </Link>
                     ))}
                     <div>
-                        <a
-                            className="work-link"
-                            id="archive"
-                            href="./archive.html"
-                        >
-                            archive
-                        </a>
+                        <Link href="/work/archive">
+                            <a className="work-link" id="archive">
+                                archive
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>
