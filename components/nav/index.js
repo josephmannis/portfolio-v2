@@ -41,17 +41,15 @@ const Navigation = () => {
                 </Link>
             </div>
             {!showNav && (
-                <a
+                <button
+                    className="nav-button"
                     onClick={() => {
                         toggleNav(true);
                     }}
+                    id="nav-toggle"
                 >
-                    <img
-                        className="nav-icon"
-                        src={require("images/nav/hamburger.svg")}
-                        id="nav-toggle"
-                    />
-                </a>
+                    m e n u
+                </button>
             )}
             <div
                 id="nav-menu"
