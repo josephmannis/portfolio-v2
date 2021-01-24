@@ -66,7 +66,7 @@ const CaseStudy = ({
                                         className="nav-link"
                                         href={Link.url(figmaLink)}
                                     >
-                                        figma repo
+                                        figma link
                                     </a>
                                 )}
                             </div>

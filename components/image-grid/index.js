@@ -14,7 +14,6 @@ const ImageGrid = ({ images }) => {
     };
 
     const renderChunk = (imageSet) => {
-        console.log("rendering");
         return imageSet.map((img, i) => {
             return (
                 <div key={i} className="image-grid-column">

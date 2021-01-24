@@ -10,8 +10,6 @@ const CaseStudySection = ({ section }) => {
     const content = section.primary;
 
     const renderNext = () => {
-        console.log(section.slice_type);
-
         switch (section.slice_type) {
             case slices.title:
                 return <RichText render={content.section_title} />;
