@@ -14,6 +14,7 @@ $body_background: #000033;
 $body_light: #151e7a;
 
 // Typography
+$font_family: "Work Sans";
 $body_text_min_val: 12;
 $body_text_min_px: 12px;
 $body_text_max_val: 36;
@@ -32,7 +33,7 @@ $header_text_size: scale_value(
     $header_text_max_val
 );
 
-$work_link_text_size: 13vw;
+$work_link_text_size: 9vw;
 
 $nav_link_text_min_val: 14;
 $nav_link_text_min_px: 14px;
