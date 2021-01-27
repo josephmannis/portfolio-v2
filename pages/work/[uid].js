@@ -17,11 +17,10 @@ const CaseStudy = ({
     body,
     next,
     previous,
-    role,
 }) => {
     const projectDate = Date(startDate);
     return (
-        <>
+        <div className="footer-base">
             <Navigation />
             <div className="main-content-container">
                 <div className="case-study-container">
@@ -80,7 +79,7 @@ const CaseStudy = ({
                 </div>
             </div>
             <CaseStudyFooter next={next} previous={previous} />
-        </>
+        </div>
     );
 };
 
