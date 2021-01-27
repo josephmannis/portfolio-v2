@@ -9,6 +9,11 @@ export const slices = {
     grid: "three_image_grid",
 };
 
+export const tags = {
+    code: "dev",
+    design: "design",
+};
+
 export const Image = PropTypes.shape({
     url: PropTypes.string.isRequired,
     alt: PropTypes.string,

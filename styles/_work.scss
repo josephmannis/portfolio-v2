@@ -2,6 +2,7 @@
 
 ::-webkit-scrollbar {
     height: 10px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -25,14 +26,58 @@
     min-height: 100%;
     justify-content: center;
     width: 100%;
+    margin-left: $border_margin;
 }
 
 .work-links {
-    display: flex;
-    flex-direction: row;
+    @include row;
     align-items: center;
     height: 100%;
-    margin-left: $border_margin;
+}
+
+.work-filters {
+    @include row;
+    position: relative;
+    margin-top: 2em;
+}
+// Src: www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox
+.container {
+    display: block;
+    position: relative;
+    padding: 0 35px 0 35px;
+    // margin-bottom: 12px;
+    cursor: pointer;
+    font-size: $nav_link_text_size;
+    color: $text_main;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+    transition: all 0.1s linear;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: rgba($color: #ffffff5d, $alpha: 0.25);
+}
+
+.container input:checked ~ .checkmark {
+    background-color: white;
 }
 
 .work-tile {
@@ -92,12 +137,22 @@
 }
 
 @media only screen and (max-width: 1080px) {
+    .work-filters {
+        padding: 9em 0 7% 5%;
+    }
+
+    .work-container {
+        padding-top: 4vw;
+        margin-left: 0;
+        flex-direction: column-reverse;
+    }
+
     .work-links {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 100%;
-        margin: $work_top_padding 0 $work_top_padding 0;
+        margin: 0 0 $work_top_padding 0;
     }
 
     .work-tile {
