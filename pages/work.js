@@ -4,7 +4,8 @@ import Link from "next/link";
 import Navigation from "../components/nav";
 import React, { useEffect, useRef } from "react";
 import { Checkbox } from "../components/checkbox";
-import { tags } from "../types";
+import { Image, tags } from "../types";
+import { fetchDisplayedStudies } from "./api/case-study";
 
 export const Work = ({ caseStudies }) => {
     const workLinks = useRef(null);
@@ -22,10 +23,7 @@ export const Work = ({ caseStudies }) => {
     };
 
     const shouldShow = (caseStudy) => {
-        return (
-            selectedFilters.length === 0 ||
-            selectedFilters.some((v) => caseStudy.tags.includes(v))
-        );
+        return selectedFilters.length === 0 || selectedFilters.some((v) => caseStudy.tags.includes(v));
     };
 
     useEffect(() => {
@@ -61,6 +59,7 @@ export const Work = ({ caseStudies }) => {
                         .map((study, i) => (
                             <Link key={i} href={study.url}>
                                 <div className="work-tile">
+                                    <img src={study.coverImage?.url} alt={study.coverImage?.alt} />
                                     <a>{study.title}</a>
                                 </div>
                             </Link>
@@ -74,16 +73,8 @@ export const Work = ({ caseStudies }) => {
                     </div>
                 </div>
                 <div className="work-filters">
-                    <Checkbox
-                        onClicked={updateFilter}
-                        selected={selectedFilters.includes(designId)}
-                        id={designId}
-                    />
-                    <Checkbox
-                        onClicked={updateFilter}
-                        selected={selectedFilters.includes(codeId)}
-                        id={codeId}
-                    />
+                    <Checkbox onClicked={updateFilter} selected={selectedFilters.includes(designId)} id={designId} />
+                    <Checkbox onClicked={updateFilter} selected={selectedFilters.includes(codeId)} id={codeId} />
                 </div>
             </div>
         </>
@@ -96,12 +87,13 @@ Work.propTypes = {
             title: PropTypes.string.isRequired,
             url: PropTypes.string.isRequired,
             tags: PropTypes.arrayOf(PropTypes.string),
+            coverImage: Image,
         })
     ),
 };
 
 export async function getStaticProps() {
-    const studies = await fetchCaseStudies();
+    const studies = await fetchDisplayedStudies();
     return {
         props: {
             caseStudies: studies.map((study) => {
@@ -109,6 +101,7 @@ export async function getStaticProps() {
                     title: study.data.title[0].text,
                     url: `/work/${encodeURIComponent(study.uid)}`,
                     tags: study.tags,
+                    coverImage: study.data.cover_image ?? null,
                 };
             }),
         },
