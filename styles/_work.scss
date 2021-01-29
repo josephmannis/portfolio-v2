@@ -90,7 +90,6 @@
     padding-top: 30%;
     margin-right: 1em;
     background-color: rgba($color: #ffffff5d, $alpha: 0.5);
-    border: 1px solid #ffffff5d;
     overflow: hidden;
     color: transparent;
 
@@ -106,7 +105,7 @@
 
     &,
     img {
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
 
     img {
