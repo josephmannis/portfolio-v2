@@ -24,6 +24,14 @@ $maximum-text: 36;
     color: $text_accent;
     margin-top: 1vw;
     font-size: $body_text_size;
+    a {
+        font-weight: bolder;
+        text-decoration: none;
+        color: $text_accent;
+    }
+    p {
+        margin-bottom: 1em;
+    }
 }
 
 @media only screen and (min-width: 1081px) {
@@ -40,7 +48,7 @@ $maximum-text: 36;
 
     .about-text-container {
         left: 58vw;
-        width: 26vw;
+        width: 28vw;
         height: 100%;
         @include column;
         justify-content: center;
