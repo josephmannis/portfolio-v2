@@ -1,8 +1,7 @@
 import { Client } from "../../prismic-configuration";
 import Prismic from "@prismicio/client";
-import util from "util";
 
-export const fetchCaseStudies = async () => {
+export const fetchWorkPage = async () => {
     let studies = await Client().query(Prismic.Predicates.at("document.type", "portfolio_page"), {
         fetchLinks: ["case_study.title", "case_study.cover_image"],
     });
@@ -12,6 +11,11 @@ export const fetchCaseStudies = async () => {
             ...studyLink.studies,
         };
     });
+};
+
+export const fetchCaseStudies = async () => {
+    let studies = await Client().query(Prismic.Predicates.at("document.type", "case_study"));
+    return studies.results;
 };
 
 export const getStudyByUID = async (uid) => {

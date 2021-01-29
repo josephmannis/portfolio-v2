@@ -5,6 +5,7 @@ import Navigation from "../components/nav";
 import React, { useEffect, useRef } from "react";
 import { Checkbox } from "../components/checkbox";
 import { Image, tags } from "../types";
+import { fetchWorkPage } from "./api/case-study";
 
 export const Work = ({ caseStudies }) => {
     const workLinks = useRef(null);
@@ -92,7 +93,7 @@ Work.propTypes = {
 };
 
 export async function getStaticProps() {
-    const studies = await fetchCaseStudies();
+    const studies = await fetchWorkPage();
     return {
         props: {
             caseStudies: studies.map((study) => {
