@@ -64,13 +64,13 @@ export const Work = ({ caseStudies }) => {
                                 </div>
                             </Link>
                         ))}
-                    <div>
                         <Link href="/work/archive">
-                            <a className="work-link" id="archive">
+                    <div className="work-tile archive-tile">
+                            <a>
                                 archive
                             </a>
-                        </Link>
                     </div>
+                        </Link>
                 </div>
                 <div className="work-filters">
                     <Checkbox onClicked={updateFilter} selected={selectedFilters.includes(designId)} id={designId} />

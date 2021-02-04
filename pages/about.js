@@ -8,8 +8,6 @@ const About = ({ description }) => {
             <Navigation />
             <div className="main-content-container">
                 <div className="about-text-container">
-                    <h1 className="about-name"> joe annis </h1>
-
                     <p className="about-description">
                         <RichText render={description} />
                     </p>

@@ -39,13 +39,7 @@ const CaseStudySection = ({ section }) => {
                 );
             case slices.grid:
                 return (
-                    <ImageGrid
-                        images={[
-                            content.grid_image_one,
-                            content.grid_image_two,
-                            content.grid_image_three,
-                        ]}
-                    />
+                    <ImageGrid images={section.items.map(i => i.grid_image)}/>
                 );
             default:
                 return <></>;

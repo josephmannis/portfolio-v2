@@ -125,8 +125,14 @@
     }
 }
 
+.archive-tile {
+    color: $text_main;
+    background-color: transparent;
+    border: 1px solid $text_accent;
+}
+
 .work-link {
-    font-family: "Work Sans";
+    font-family: $font_family;
     font-weight: bolder;
     color: $text_accent;
     font-size: $work_link_text_size;

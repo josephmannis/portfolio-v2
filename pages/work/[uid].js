@@ -112,7 +112,6 @@ export async function getStaticProps({ params }) {
     );
     const study = allStudies[studyIndex];
 
-    // console.log(util.inspect(study, { depth: null }));
     return {
         props: {
             title: study.data.title,

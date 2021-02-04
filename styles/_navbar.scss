@@ -11,7 +11,7 @@ div {
 }
 
 .nav-button {
-    font-family: "Work Sans";
+    font-family: $font_family;
     padding: 0.75em 1.75em 0.75em 1.75em;
     border: none;
     border-radius: 6px;
@@ -56,7 +56,7 @@ div {
 }
 
 .nav-link {
-    font-family: "Work Sans";
+    font-family: $font_family;
     font-weight: normal;
     color: $text_main;
     text-decoration: none;

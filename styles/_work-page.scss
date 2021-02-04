@@ -10,6 +10,7 @@
         font-weight: bolder;
         color: $text_accent;
         font-size: $header_text_size;
+        margin-bottom: 32px;
     }
     margin-bottom: 4em;
 }
@@ -39,7 +40,7 @@
     h4,
     h5,
     h6 {
-        font-weight: bolder;
+        font-weight: 900;
         color: $text_accent;
     }
     p,
@@ -49,6 +50,8 @@
         color: $text_accent;
         margin-bottom: 2vh;
         font-size: $body_text_size;
+        font-weight: $body_weight;
+        line-height: $body_line_height;
     }
     a {
         font-weight: bolder;
@@ -67,7 +70,7 @@
 }
 
 .study-section {
-    margin-bottom: 4vh;
+    margin-bottom: 5em;
 }
 
 .study-title {
@@ -170,13 +173,12 @@
 
 .image-grid {
     @include row;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 0 -1em 0 -1em;
 }
 
-.image-grid-column {
-    flex: 33%;
-    max-width: 33%;
+.image-grid-odd, .image-grid-even {
     padding: 1em;
     transition: all 0.15s linear;
 
@@ -188,10 +190,21 @@
     }
 }
 
+.image-grid-odd {
+    flex: 33%;
+    max-width: 33%;
+}
+
+.image-grid-even {
+    flex: 50%;
+    max-width: 50%;
+}
+
 .quote {
     margin: 2em 0 2em 0;
     p {
         font-size: $quote_text_size;
+        line-height: unset;
     }
 }
 
@@ -247,7 +260,7 @@
         }
     }
 
-    .image-grid-column {
+    .image-grid-odd, .image-grid-even {
         flex: 50%;
         max-width: 50%;
     }
@@ -259,7 +272,7 @@
 }
 
 @media only screen and (max-width: 680px) {
-    .image-grid-column {
+    .image-grid-odd, .image-grid-even {
         flex: 100%;
         max-width: 100%;
     }
