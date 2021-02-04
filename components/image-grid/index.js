@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
+import React from 'react'
 import { Image } from "../../types";
+import ImageModal from '../image-modal'
 
 const ImageGrid = ({ images }) => {
     const isEven = () => images.length % 2 === 0 
@@ -17,9 +19,7 @@ const ImageGrid = ({ images }) => {
     const renderChunk = (imageSet) => {
         return imageSet.map((img, i) => {
             return (
-                <div key={i} className={`image-grid-${isEven() ? 'even' : 'odd'}`}>
-                    <img src={img.url} alt={img.alt} />
-                </div>
+                <ImageModal image={img} key={i} isEven={isEven()}/>
             );
         });
     };

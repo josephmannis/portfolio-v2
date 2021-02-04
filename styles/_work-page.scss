@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 .footer-base {
-    display: relative;
+    position: relative;
 }
 
 .project-information-container {
@@ -181,12 +181,17 @@
 .image-grid-odd, .image-grid-even {
     padding: 1em;
     transition: all 0.15s linear;
+    background-color: transparent;
+    border: none;
 
     img {
         width: 100%;
     }
     &:hover {
-        transform: scale(1.25);
+       
+    }
+    &:active {
+        // transform: scale(.95);
     }
 }
 
@@ -199,6 +204,38 @@
     flex: 50%;
     max-width: 50%;
 }
+
+.popover-button {
+    background-color: transparent;
+    border: none;
+}
+
+.popover-bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $body_light_transparent;
+}
+
+.popover-image-full {
+    padding: 0;
+    transition: none;
+    position: absolute;
+    height: 80vh;
+    width: auto;
+    left: 50%;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+    transform: translate(-50%, -50%);
+    img {
+        height: 100%;
+        width: auto;
+    }
+}
+
 
 .quote {
     margin: 2em 0 2em 0;
