@@ -15,10 +15,8 @@ class MyDocument extends Document {
                         href="favicon.ico"
                         type="image/vnd.microsoft.icon"
                     />
-                    <link
-                        href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,800,900&display=swap"
-                        rel="stylesheet"
-                    />
+                    <link href="/fonts/fonts.css" rel="stylesheet"/>
+
                     <meta name="author" content="Joseph Annis" />
                     <meta
                         name="description"

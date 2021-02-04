@@ -7,21 +7,32 @@ $min_screen_size_px: 300px;
 $max_screen_size: 3840;
 
 // Styles //
-$text_accent: #e9dbc3;
+$text_accent: rgb(255, 253, 226);
 $text_main: #fff;
 $text_selected: #d56e7f;
 $body_background: #000033;
 $body_light: #151e7a;
 
 // Typography
-$font_family: "Work Sans";
-$body_text_min_val: 12;
-$body_text_min_px: 12px;
+$font_family: "Charlevoix Pro", "Helvetica", "sans-serif";
+$body_text_min_val: 14;
+$body_text_min_px: 14px;
 $body_text_max_val: 36;
 $body_text_size: scale_value(
     $body_text_min_val,
     $body_text_min_px,
     $body_text_max_val
+);
+$body_weight: 400;
+
+$body_height_min_val: 22;
+$body_height_min_px: 22px;
+$body_height_max_val: 40;
+
+$body_line_height: scale_value(
+    $body_height_min_val,
+    $body_height_min_px,
+    $body_height_max_val
 );
 
 $header_text_min_val: 72;
