@@ -204,6 +204,7 @@
     margin: 2em 0 2em 0;
     p {
         font-size: $quote_text_size;
+        line-height: unset;
     }
 }
 
