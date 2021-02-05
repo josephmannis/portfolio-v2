@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Charlevoix Pro";
     src: url("/fonts/CharlevoixPro-Regular.otf") format("otf"),
-         url("/fonts/CharlevoixPro-Bold.otf") format("otf"),
-         url("/fonts/CharlevoixPro-Black.otf") format("otf"),
-         url("/fonts/CharlevoixPro-Thin.otf") format("otf");
-  }
+        url("/fonts/CharlevoixPro-Bold.otf") format("otf"),
+        url("/fonts/CharlevoixPro-Black.otf") format("otf"),
+        url("/fonts/CharlevoixPro-Thin.otf") format("otf");
+}

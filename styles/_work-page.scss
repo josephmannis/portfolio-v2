@@ -178,7 +178,8 @@
     padding: 0 -1em 0 -1em;
 }
 
-.image-grid-odd, .image-grid-even {
+.image-grid-odd,
+.image-grid-even {
     padding: 1em;
     transition: all 0.15s linear;
     background-color: transparent;
@@ -200,13 +201,14 @@
 }
 
 .popover-image {
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     &:hover {
         transform: scale(1.02);
     }
 }
 
-.popover-image, .popover-image-full {
+.popover-image,
+.popover-image-full {
     width: 100%;
 }
 
@@ -218,12 +220,10 @@
     border: none;
 
     img {
-        
         height: 100%;
         width: auto;
     }
 }
-
 
 .quote {
     margin: 2em 0 2em 0;
@@ -285,7 +285,8 @@
         }
     }
 
-    .image-grid-odd, .image-grid-even {
+    .image-grid-odd,
+    .image-grid-even {
         flex: 50%;
         max-width: 50%;
     }
@@ -297,7 +298,8 @@
 }
 
 @media only screen and (max-width: 680px) {
-    .image-grid-odd, .image-grid-even {
+    .image-grid-odd,
+    .image-grid-even {
         flex: 100%;
         max-width: 100%;
     }

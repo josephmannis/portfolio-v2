@@ -1,8 +1,8 @@
 import "../styles/styles.scss";
 import Head from "next/head";
-import Modal from 'react-modal';
+import Modal from "react-modal";
 
-Modal.setAppElement("#__next")
+Modal.setAppElement("#__next");
 
 function MyApp({ Component, pageProps }) {
     return (

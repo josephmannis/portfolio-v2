@@ -1,6 +1,5 @@
-import { fetchCaseStudies } from "api/case-study";
+import { fetchCaseStudies, fetchDisplayedStudies } from "api/case-study";
 import { RichText, Link, Date } from "prismic-reactjs";
-import util from "util";
 import PropTypes from "prop-types";
 import CaseStudySection from "components/case-study-section";
 import CaseStudyFooter from "components/case-study-footer";
@@ -108,11 +107,15 @@ const getStudyLink = (uid) => {
     return uid ? `/work/${encodeURIComponent(uid)}` : null;
 };
 
+const getIndex = (studies, uid) => {
+    return [...studies].findIndex((val) => val.uid === uid);
+};
+
 export async function getStaticProps({ params }) {
+    const allDisplayed = await fetchDisplayedStudies();
     const allStudies = await fetchCaseStudies();
-    const studyIndex = [...allStudies].findIndex(
-        (val) => val.uid === params.uid
-    );
+    const studyIndex = getIndex(allStudies, params.uid);
+    const studyDisplayOrderIndex = getIndex(allDisplayed, params.uid);
     const study = allStudies[studyIndex];
 
     return {
@@ -126,8 +129,10 @@ export async function getStaticProps({ params }) {
             figmaLink: getWebLink(study.data.figma_link),
             repoLink: getWebLink(study.data.repository_link),
             body: study.data.body,
-            next: getStudyLink(allStudies[studyIndex + 1]?.uid),
-            previous: getStudyLink(allStudies[studyIndex - 1]?.uid),
+            next: getStudyLink(allDisplayed[studyDisplayOrderIndex + 1]?.uid),
+            previous: getStudyLink(
+                allDisplayed[studyDisplayOrderIndex - 1]?.uid
+            ),
         },
     };
 }

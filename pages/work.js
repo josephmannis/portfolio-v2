@@ -23,7 +23,10 @@ export const Work = ({ caseStudies }) => {
     };
 
     const shouldShow = (caseStudy) => {
-        return selectedFilters.length === 0 || selectedFilters.some((v) => caseStudy.tags.includes(v));
+        return (
+            selectedFilters.length === 0 ||
+            selectedFilters.some((v) => caseStudy.tags.includes(v))
+        );
     };
 
     useEffect(() => {
@@ -59,22 +62,31 @@ export const Work = ({ caseStudies }) => {
                         .map((study, i) => (
                             <Link key={i} href={study.url}>
                                 <div className="work-tile">
-                                    <img src={study.coverImage?.url} alt={study.coverImage?.alt} />
+                                    <img
+                                        src={study.coverImage?.url}
+                                        alt={study.coverImage?.alt}
+                                    />
                                     <a>{study.title}</a>
                                 </div>
                             </Link>
                         ))}
-                        <Link href="/work/archive">
-                    <div className="work-tile archive-tile">
-                            <a>
-                                archive
-                            </a>
-                    </div>
-                        </Link>
+                    <Link href="/work/archive">
+                        <div className="work-tile archive-tile">
+                            <a>archive</a>
+                        </div>
+                    </Link>
                 </div>
                 <div className="work-filters">
-                    <Checkbox onClicked={updateFilter} selected={selectedFilters.includes(designId)} id={designId} />
-                    <Checkbox onClicked={updateFilter} selected={selectedFilters.includes(codeId)} id={codeId} />
+                    <Checkbox
+                        onClicked={updateFilter}
+                        selected={selectedFilters.includes(designId)}
+                        id={designId}
+                    />
+                    <Checkbox
+                        onClicked={updateFilter}
+                        selected={selectedFilters.includes(codeId)}
+                        id={codeId}
+                    />
                 </div>
             </div>
         </>
