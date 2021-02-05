@@ -2,9 +2,12 @@ import { Client } from "../../prismic-configuration";
 import Prismic from "@prismicio/client";
 
 export const fetchDisplayedStudies = async () => {
-    let studies = await Client().query(Prismic.Predicates.at("document.type", "portfolio_page"), {
-        fetchLinks: ["case_study.title", "case_study.cover_image"],
-    });
+    let studies = await Client().query(
+        Prismic.Predicates.at("document.type", "portfolio_page"),
+        {
+            fetchLinks: ["case_study.title", "case_study.cover_image"],
+        }
+    );
 
     return studies.results[0].data.case_studies.map((studyLink) => {
         return {
@@ -14,7 +17,9 @@ export const fetchDisplayedStudies = async () => {
 };
 
 export const fetchCaseStudies = async () => {
-    let studies = await Client().query(Prismic.Predicates.at("document.type", "case_study"));
+    let studies = await Client().query(
+        Prismic.Predicates.at("document.type", "case_study")
+    );
     return studies.results;
 };
 
@@ -31,6 +36,8 @@ export const getAbout = async () => {
 };
 
 const getPage = async (pageName) => {
-    let page = await Client().query(Prismic.Predicates.at("document.type", pageName));
+    let page = await Client().query(
+        Prismic.Predicates.at("document.type", pageName)
+    );
     return page.results[0];
 };

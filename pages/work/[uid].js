@@ -1,6 +1,5 @@
 import { fetchCaseStudies, fetchDisplayedStudies } from "api/case-study";
 import { RichText, Link, Date } from "prismic-reactjs";
-import util from "util";
 import PropTypes from "prop-types";
 import CaseStudySection from "components/case-study-section";
 import CaseStudyFooter from "components/case-study-footer";
@@ -117,11 +116,8 @@ const getIndex = (studies, uid) => {
 export async function getStaticProps({ params }) {
     const allDisplayed = await fetchDisplayedStudies();
     const allStudies = await fetchCaseStudies();
-
     const studyIndex = getIndex(allStudies, params.uid)
-
     const studyDisplayOrderIndex = getIndex(allDisplayed, params.uid)
-
     const study = allStudies[studyIndex];
 
     return {

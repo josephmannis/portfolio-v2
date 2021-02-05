@@ -7,10 +7,7 @@ const Checkerboard = ({ textLeft, text, image }) => {
         <div className={`checkerboard-${textLeft ? "left" : "right"}`}>
             <div className="checkerboard-text">{text}</div>
             <div className="checkerboard-image-wrapper">
-                <ImageModal
-                    imageClass="checkerboard-image"
-                    image={image}
-                />
+                <ImageModal imageClass="checkerboard-image" image={image} />
             </div>
         </div>
     );

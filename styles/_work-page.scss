@@ -1,315 +1,317 @@
 @import "./variables.scss";
 
 .footer-base {
-    position: relative;
+  position: relative;
 }
 
 .project-information-container {
-    h1,
-    h2 {
-        font-weight: bolder;
-        color: $text_accent;
-        font-size: $header_text_size;
-        margin-bottom: 32px;
-    }
-    margin-bottom: 4em;
+  h1,
+  h2 {
+    font-weight: bolder;
+    color: $text_accent;
+    font-size: $header_text_size;
+    margin-bottom: 32px;
+  }
+  margin-bottom: 4em;
 }
 
 .case-study-container {
-    @include row;
-    width: 100%;
-    justify-content: center;
+  @include row;
+  width: 100%;
+  justify-content: center;
 }
 
 .case-study-content,
 .archive-content {
-    margin-top: $work_top_padding;
+  margin-top: $work_top_padding;
 }
 
 .archive-content {
-    padding: 0 $work_side_padding 0 $work_side_padding;
+  padding: 0 $work_side_padding 0 $work_side_padding;
 }
 
 .case-study-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-weight: 900;
-        color: $text_accent;
-    }
-    p,
-    a,
-    ul,
-    ol {
-        color: $text_accent;
-        margin-bottom: 2vh;
-        font-size: $body_text_size;
-        font-weight: $body_weight;
-        line-height: $body_line_height;
-    }
-    a {
-        font-weight: bolder;
-    }
-    .banner,
-    .image-grid {
-        width: 125%;
-        margin-left: -12.5%;
-        filter: drop-shadow(0px 0px 40px rgba(36, 0, 255, 0.1));
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 900;
+    color: $text_accent;
+  }
+  p,
+  a,
+  ul,
+  ol {
+    color: $text_accent;
+    margin-bottom: 2vh;
+    font-size: $body_text_size;
+    font-weight: $body_weight;
+    line-height: $body_line_height;
+  }
+  a {
+    font-weight: bolder;
+  }
+  .banner,
+  .image-grid {
+    width: 125%;
+    margin-left: -12.5%;
+    filter: drop-shadow(0px 0px 40px rgba(36, 0, 255, 0.1));
+  }
 }
 
 .case-study-content,
 .project-link-container {
-    max-width: 680px;
+  max-width: 680px;
 }
 
 .study-section {
-    margin-bottom: 5em;
+  margin-bottom: 5em;
 }
 
 .study-title {
-    margin-bottom: 2vh;
+  margin-bottom: 2vh;
 }
 
 .description-container {
-    & .nav-link {
-        margin-right: 1em;
-    }
+  & .nav-link {
+    margin-right: 1em;
+  }
 }
 
 .project-date {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .work-footer {
-    flex-shrink: 0;
-    margin-top: 10vw;
-    width: 100%;
-    position: relative;
-    @include column;
-    align-items: center;
+  flex-shrink: 0;
+  margin-top: 10vw;
+  width: 100%;
+  position: relative;
+  @include column;
+  align-items: center;
 }
 
 .work-footer-wave {
-    width: 100%;
-    z-index: -1;
-    bottom: 0;
-    position: absolute;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+  position: absolute;
 }
 
 .project-link-container {
-    @include row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding-bottom: 4em;
-    width: 100%;
+  @include row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 4em;
+  width: 100%;
 }
 
 .project-link {
-    text-decoration: none;
-    user-select: none;
-    font-weight: 200;
-    color: $text_accent;
-    font-size: $nav_link_text_size;
-    transition: $nav_expansion_duration;
-    transition-timing-function: ease-in-out;
+  text-decoration: none;
+  user-select: none;
+  font-weight: 200;
+  color: $text_accent;
+  font-size: $nav_link_text_size;
+  transition: $nav_expansion_duration;
+  transition-timing-function: ease-in-out;
 }
 
 .project-link:hover {
-    color: $text_selected;
-    transition: $text_selection_duration;
+  color: $text_selected;
+  transition: $text_selection_duration;
 }
 
 .wave-group {
-    width: 100%;
-    position: absolute;
-    left: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
 }
 
 .banner {
-    width: 100%;
+  width: 100%;
 }
 
 .checkerboard-text {
-    margin-right: 3em;
-    p {
-        margin: 0;
-    }
+  margin-right: 3em;
+  p {
+    margin: 0;
+  }
 }
 
 .checkerboard-image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .checkerboard-text,
 .checkerboard-image-wrapper {
-    width: 50%;
+  width: 50%;
 }
 
 .checkerboard-left,
 .checkerboard-right {
-    @include row;
-    width: 100%;
+  @include row;
+  width: 100%;
 
-    .checkerboard-text {
-        margin: 0 3em 0 0;
-    }
+  .checkerboard-text {
+    margin: 0 3em 0 0;
+  }
 }
 
 .checkerboard-right {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 
-    .checkerboard-text {
-        margin: 0 0 0 3em;
-    }
+  .checkerboard-text {
+    margin: 0 0 0 3em;
+  }
 }
 
 .image-grid {
-    @include row;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 -1em 0 -1em;
+  @include row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 -1em 0 -1em;
 }
 
-.image-grid-odd, .image-grid-even {
-    padding: 1em;
-    transition: all 0.15s linear;
-    background-color: transparent;
-    border: none;
+.image-grid-odd,
+.image-grid-even {
+  padding: 1em;
+  transition: all 0.15s linear;
+  background-color: transparent;
+  border: none;
 
-    img {
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 }
 
 .image-grid-odd {
-    flex: 33%;
-    max-width: 33%;
+  flex: 33%;
+  max-width: 33%;
 }
 
 .image-grid-even {
-    flex: 50%;
-    max-width: 50%;
+  flex: 50%;
+  max-width: 50%;
 }
 
 .popover-image {
-    transition: all .3s ease-in-out;
-    &:hover {
-        transform: scale(1.02);
-    }
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
-.popover-image, .popover-image-full {
-    width: 100%;
+.popover-image,
+.popover-image-full {
+  width: 100%;
 }
 
 .popover-image-full {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    background-color: transparent;
-    border: none;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: transparent;
+  border: none;
 
-    img {
-        
-        height: 100%;
-        width: auto;
-    }
+  img {
+    height: 100%;
+    width: auto;
+  }
 }
 
-
 .quote {
-    margin: 2em 0 2em 0;
-    p {
-        font-size: $quote_text_size;
-        line-height: unset;
-    }
+  margin: 2em 0 2em 0;
+  p {
+    font-size: $quote_text_size;
+    line-height: unset;
+  }
 }
 
 .quote-rule {
-    @include row;
-    align-items: center;
-    hr {
-        width: 50%;
-        opacity: 0.5;
-    }
+  @include row;
+  align-items: center;
+  hr {
+    width: 50%;
+    opacity: 0.5;
+  }
 }
 
 .quote-image {
-    width: max(5%, 36px);
-    margin: 0 2em 0 2em;
+  width: max(5%, 36px);
+  margin: 0 2em 0 2em;
 }
 
 .quote-image-end {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 #next-link {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 #footer-wave-left {
-    left: 0;
-    width: 50vw;
+  left: 0;
+  width: 50vw;
 }
 
 #footer-wave-right {
-    right: 0;
-    width: 70vw;
+  right: 0;
+  width: 70vw;
 }
 
 @media only screen and (max-width: 1080px) {
-    .checkerboard-text,
-    .checkerboard-image-wrapper {
-        width: 100%;
-    }
+  .checkerboard-text,
+  .checkerboard-image-wrapper {
+    width: 100%;
+  }
 
-    .checkerboard-left,
-    .checkerboard-right {
-        @include column;
-        width: 100%;
-    }
+  .checkerboard-left,
+  .checkerboard-right {
+    @include column;
+    width: 100%;
+  }
 
-    .checkerboard-right,
-    .checkerboard-left {
-        flex-direction: column-reverse;
-        .checkerboard-text {
-            margin: 1em 0 0 0;
-        }
+  .checkerboard-right,
+  .checkerboard-left {
+    flex-direction: column-reverse;
+    .checkerboard-text {
+      margin: 1em 0 0 0;
     }
+  }
 
-    .image-grid-odd, .image-grid-even {
-        flex: 50%;
-        max-width: 50%;
-    }
+  .image-grid-odd,
+  .image-grid-even {
+    flex: 50%;
+    max-width: 50%;
+  }
 
-    .case-study-content,
-    .project-link-container {
-        max-width: 60%;
-    }
+  .case-study-content,
+  .project-link-container {
+    max-width: 60%;
+  }
 }
 
 @media only screen and (max-width: 680px) {
-    .image-grid-odd, .image-grid-even {
-        flex: 100%;
-        max-width: 100%;
-    }
+  .image-grid-odd,
+  .image-grid-even {
+    flex: 100%;
+    max-width: 100%;
+  }
 
-    .case-study-content,
-    .project-link-container {
-        max-width: 80%;
+  .case-study-content,
+  .project-link-container {
+    max-width: 80%;
 
-        .banner,
-        .image-grid {
-            width: 100%;
-            margin-left: 0;
-        }
+    .banner,
+    .image-grid {
+      width: 100%;
+      margin-left: 0;
     }
+  }
 }

@@ -1,30 +1,34 @@
-import React from 'react'
-import useScrollLock from 'use-scroll-lock';
-import Modal from 'react-modal';
+import React from "react";
+import useScrollLock from "use-scroll-lock";
+import Modal from "react-modal";
 
-const ImageModal = ({image, imageClass}) => {
+const ImageModal = ({ image, imageClass }) => {
     const [popOver, togglePopover] = React.useState(false);
 
-    useScrollLock(popOver)
+    useScrollLock(popOver);
 
     const onExpand = () => {
-        togglePopover(!popOver)
-    }
+        togglePopover(!popOver);
+    };
 
     const customStyles = {
         overlay: {
-            backgroundColor: "#0c0c0cbe"
+            backgroundColor: "#0c0c0cbe",
         },
         content: {
             background: "transparent",
-            border: 'none'
-        }
+            border: "none",
+        },
     };
 
     return (
         <>
             <div onClick={onExpand} className={imageClass}>
-                <img className="popover-image" src={image.url} alt={image.alt} />
+                <img
+                    className="popover-image"
+                    src={image.url}
+                    alt={image.alt}
+                />
             </div>
 
             <Modal
@@ -36,11 +40,10 @@ const ImageModal = ({image, imageClass}) => {
             >
                 <div onClick={onExpand} className="popover-image-full">
                     <img src={image.url} alt={image.alt} />
-                </div> 
+                </div>
             </Modal>
-        
         </>
-    )
-}
+    );
+};
 
 export default ImageModal;

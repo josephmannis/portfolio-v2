@@ -27,16 +27,16 @@ const CaseStudySection = ({ section }) => {
                     />
                 );
             case slices.banner:
-                return (
-                    <Banner image={content.centered_image}/>
-                );
+                return <Banner image={content.centered_image} />;
             case slices.quote:
                 return (
                     <Quote text={<RichText render={content.quote_text} />} />
                 );
             case slices.grid:
                 return (
-                    <ImageGrid images={section.items.map(i => i.grid_image)}/>
+                    <ImageGrid
+                        images={section.items.map((i) => i.grid_image)}
+                    />
                 );
             default:
                 return <></>;
