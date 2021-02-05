@@ -108,16 +108,14 @@ const getStudyLink = (uid) => {
 };
 
 const getIndex = (studies, uid) => {
-    return [...studies].findIndex(
-        (val) => val.uid === uid
-    );
-}
+    return [...studies].findIndex((val) => val.uid === uid);
+};
 
 export async function getStaticProps({ params }) {
     const allDisplayed = await fetchDisplayedStudies();
     const allStudies = await fetchCaseStudies();
-    const studyIndex = getIndex(allStudies, params.uid)
-    const studyDisplayOrderIndex = getIndex(allDisplayed, params.uid)
+    const studyIndex = getIndex(allStudies, params.uid);
+    const studyDisplayOrderIndex = getIndex(allDisplayed, params.uid);
     const study = allStudies[studyIndex];
 
     return {
@@ -132,7 +130,9 @@ export async function getStaticProps({ params }) {
             repoLink: getWebLink(study.data.repository_link),
             body: study.data.body,
             next: getStudyLink(allDisplayed[studyDisplayOrderIndex + 1]?.uid),
-            previous: getStudyLink(allDisplayed[studyDisplayOrderIndex - 1]?.uid),
+            previous: getStudyLink(
+                allDisplayed[studyDisplayOrderIndex - 1]?.uid
+            ),
         },
     };
 }

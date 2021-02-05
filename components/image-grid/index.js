@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
-import React from 'react'
+import React from "react";
 import { Image } from "../../types";
-import ImageModal from '../image-modal'
+import ImageModal from "../image-modal";
 
 const ImageGrid = ({ images }) => {
-    const isEven = () => images.length % 2 === 0 
+    const isEven = () => images.length % 2 === 0;
     const renderImages = () => {
         let chunkSize = isEven() ? 4 : 3;
         let chunks = [];
@@ -19,7 +19,11 @@ const ImageGrid = ({ images }) => {
     const renderChunk = (imageSet) => {
         return imageSet.map((img, i) => {
             return (
-                <ImageModal image={img} key={i} imageClass={`image-grid-${isEven() ? 'even' : 'odd'}`}/>
+                <ImageModal
+                    image={img}
+                    key={i}
+                    imageClass={`image-grid-${isEven() ? "even" : "odd"}`}
+                />
             );
         });
     };
@@ -27,6 +31,6 @@ const ImageGrid = ({ images }) => {
     return <div className="image-grid">{renderImages()}</div>;
 };
 ImageGrid.propTypes = {
-    images: PropTypes.arrayOf(Image)
+    images: PropTypes.arrayOf(Image),
 };
 export default ImageGrid;

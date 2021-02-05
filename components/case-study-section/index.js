@@ -56,7 +56,4 @@ const CaseStudySection = ({ section }) => {
     );
 };
 
-CaseStudySection.propTypes = {
-    type: PropTypes.object.isRequired,
-};
 export default CaseStudySection;

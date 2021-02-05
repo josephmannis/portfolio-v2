@@ -15,5 +15,8 @@ Returns a unit value that scales based on the max and min between the maximum an
 @param max: A *unitless* number that represents the max value, ie 700.
 */
 @function scale_value($min, $min_unit, $max) {
-    @return calc(#{$min_unit} + (#{$max} - #{$min}) * ((100vw - #{$min_screen_size_px}) / (#{$max_screen_size} - #{$min_screen_size})));
+    @return calc(
+        #{$min_unit} + (#{$max} - #{$min}) * ((100vw - #{$min_screen_size_px}) /
+                    (#{$max_screen_size} - #{$min_screen_size}))
+    );
 }

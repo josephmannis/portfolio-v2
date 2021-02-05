@@ -13,8 +13,14 @@ const About = ({ description }) => {
                     </p>
                 </div>
 
-                <img src={require("images/about/about-splash.svg")} id="about-splash" />
-                <img src={require("images/about/about-splash-flip.svg")} id="about-splash-mobile" />
+                <img
+                    src={require("images/about/about-splash.svg")}
+                    id="about-splash"
+                />
+                <img
+                    src={require("images/about/about-splash-flip.svg")}
+                    id="about-splash-mobile"
+                />
             </div>
         </>
     );
