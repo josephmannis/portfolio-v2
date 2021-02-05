@@ -1,5 +1,6 @@
 import React from 'react'
 import useScrollLock from 'use-scroll-lock';
+import Modal from 'react-modal';
 
 const ImageModal = ({image, isEven}) => {
     const [popOver, togglePopover] = React.useState(false);
@@ -10,7 +11,15 @@ const ImageModal = ({image, isEven}) => {
         togglePopover(!popOver)
     }
 
-    
+    const customStyles = {
+        overlay: {
+            backgroundColor: "#0c0c0cbe"
+        },
+        content: {
+            background: "transparent",
+            border: 'none'
+        }
+    };
 
     return (
         <>
@@ -18,13 +27,18 @@ const ImageModal = ({image, isEven}) => {
                 <img src={image.url} alt={image.alt} />
             </button>
 
-            { popOver &&
-                <div onClick={onExpand} className="popover-bg">
-                    {/* <button onClick={onExpand} className="popover-image-full">
-                        <img src={image.url} alt={image.alt} />
-                    </button> */}
-                </div>
-            }
+            <Modal
+                style={customStyles}
+                onRequestClose={onExpand}
+                isOpen={popOver}
+                shouldCloseOnOverlayClick
+                shouldCloseOnEsc
+            >
+                <div onClick={onExpand} className="popover-image-full">
+                    <img src={image.url} alt={image.alt} />
+                </div> 
+            </Modal>
+        
         </>
     )
 }

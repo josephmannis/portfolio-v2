@@ -211,25 +211,17 @@
 }
 
 .popover-bg {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    top: 0;
     background-color: $body_light_transparent;
 }
 
 .popover-image-full {
-    padding: 0;
-    transition: none;
-    position: absolute;
-    height: 80vh;
-    width: auto;
-    left: 50%;
-    top: 50%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     border: none;
-    transform: translate(-50%, -50%);
+    
     img {
         height: 100%;
         width: auto;
