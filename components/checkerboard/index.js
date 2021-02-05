@@ -17,7 +17,7 @@ const Checkerboard = ({ textLeft, text, image }) => {
 };
 
 Checkerboard.propTypes = {
-    textLeft: PropTypes.boolean,
+    textLeft: PropTypes.bool,
     text: PropTypes.node,
     image: Image,
 };
