@@ -187,12 +187,6 @@
     img {
         width: 100%;
     }
-    &:hover {
-       
-    }
-    &:active {
-        // transform: scale(.95);
-    }
 }
 
 .image-grid-odd {
@@ -214,15 +208,26 @@
     background-color: $body_light_transparent;
 }
 
+.popover-image {
+    transition: all .3s ease-in-out;
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.popover-image, .popover-image-full {
+    width: 100%;
+}
+
 .popover-image-full {
     display: flex;
     justify-content: center;
-    width: 100%;
     height: 100%;
     background-color: transparent;
     border: none;
-    
+
     img {
+        
         height: 100%;
         width: auto;
     }

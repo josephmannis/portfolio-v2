@@ -2,7 +2,7 @@ import React from 'react'
 import useScrollLock from 'use-scroll-lock';
 import Modal from 'react-modal';
 
-const ImageModal = ({image, isEven}) => {
+const ImageModal = ({image, imageClass}) => {
     const [popOver, togglePopover] = React.useState(false);
 
     useScrollLock(popOver)
@@ -23,9 +23,9 @@ const ImageModal = ({image, isEven}) => {
 
     return (
         <>
-            <button onClick={onExpand} className={`image-grid-${isEven ? 'even' : 'odd'}`}>
-                <img src={image.url} alt={image.alt} />
-            </button>
+            <div onClick={onExpand} className={imageClass}>
+                <img className="popover-image" src={image.url} alt={image.alt} />
+            </div>
 
             <Modal
                 style={customStyles}

@@ -1,6 +1,7 @@
 import { Image } from "types";
+import ImageModal from "../image-modal";
 
-const Banner = ({ src, alt }) => <img className="banner" src={src} alt={alt} />;
+const Banner = ({ image }) => <ImageModal imageClass="banner" image={image} />;
 
 Banner.propTypes = Image;
 

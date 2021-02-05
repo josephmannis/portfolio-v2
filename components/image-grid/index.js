@@ -19,7 +19,7 @@ const ImageGrid = ({ images }) => {
     const renderChunk = (imageSet) => {
         return imageSet.map((img, i) => {
             return (
-                <ImageModal image={img} key={i} isEven={isEven()}/>
+                <ImageModal image={img} key={i} imageClass={`image-grid-${isEven() ? 'even' : 'odd'}`}/>
             );
         });
     };

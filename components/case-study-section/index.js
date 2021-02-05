@@ -28,10 +28,7 @@ const CaseStudySection = ({ section }) => {
                 );
             case slices.banner:
                 return (
-                    <Banner
-                        src={content.centered_image.url}
-                        alt={content.centered_image.alt}
-                    />
+                    <Banner image={content.centered_image}/>
                 );
             case slices.quote:
                 return (
