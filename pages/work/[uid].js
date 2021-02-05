@@ -48,6 +48,7 @@ const CaseStudy = ({
                                     <a
                                         className="nav-link"
                                         href={Link.url(repoLink)}
+                                        target="_blank"
                                     >
                                         project repo
                                     </a>
@@ -56,6 +57,7 @@ const CaseStudy = ({
                                     <a
                                         className="nav-link"
                                         href={Link.url(liveLink)}
+                                        target="_blank"
                                     >
                                         live site
                                     </a>
@@ -64,6 +66,7 @@ const CaseStudy = ({
                                     <a
                                         className="nav-link"
                                         href={Link.url(figmaLink)}
+                                        target="_blank"
                                     >
                                         figma link
                                     </a>
