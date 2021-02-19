@@ -7,9 +7,9 @@
 
 @font-face {
     font-family: "Charlevoix Pro";
-    src: url("CharlevoixPro-Regular.otf") format("opentype");
+    src: url("CharlevoixPro-Bold.otf") format("opentype");
 
-    font-weight: normal;
+    font-weight: bolder;
 }
 
 @font-face {
@@ -17,4 +17,11 @@
     src: url("CharlevoixPro-Black.otf") format("opentype");
 
     font-weight: bold;
+}
+
+@font-face {
+    font-family: "Charlevoix Pro";
+    src: url("CharlevoixPro-Regular.otf") format("opentype");
+
+    font-weight: normal;
 }
