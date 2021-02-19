@@ -5,6 +5,7 @@ const QuoteRule = ({ isEnd }) => {
             <img
                 className={`quote-image ${isEnd ? "quote-image-end" : ""}`}
                 src={require("images/work/template/quote.svg")}
+                alt="A picture of a quotation mark."
             />
             <hr />
         </div>

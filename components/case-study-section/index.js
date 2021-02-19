@@ -16,14 +16,12 @@ const CaseStudySection = ({ section }) => {
             case slices.paragraph:
                 return <RichText render={content.paragraph} />;
             case slices.checkerboard:
+                console.log(content.checkerboard_image);
                 return (
                     <Checkerboard
                         textLeft={content.text_left}
                         text={<RichText render={content.checkerboard_text} />}
-                        image={{
-                            url: content.checkerboard_image.url,
-                            alt: content.checkerboard_image.alt,
-                        }}
+                        image={content.checkerboard_image}
                     />
                 );
             case slices.banner:
