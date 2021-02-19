@@ -16,10 +16,12 @@ const About = ({ description }) => {
                 <img
                     src={require("images/about/about-splash.svg")}
                     id="about-splash"
+                    alt="An illustration of joseph lying on an inflatable tube in a pond of water looking at the stars."
                 />
                 <img
                     src={require("images/about/about-splash-flip.svg")}
                     id="about-splash-mobile"
+                    alt="An illustration of joseph lying on an inflatable tube in a pond of water looking at the stars."
                 />
             </div>
         </>

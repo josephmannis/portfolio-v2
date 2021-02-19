@@ -36,6 +36,7 @@ const Navigation = () => {
                         <img
                             className="nav-icon"
                             src={require("images/nav/ja_logo.svg")}
+                            alt="Joseph Annis' logo. An upside down crown with the letters JA on top."
                         />
                     </a>
                 </Link>
@@ -61,6 +62,7 @@ const Navigation = () => {
                         src={require("images/nav/closeicon.svg")}
                         className="nav-icon"
                         id="nav-close"
+                        alt="An icon of an X to close the menu."
                     />
                 </a>
                 <div className="nav-link-container">
