@@ -83,7 +83,7 @@ const Navigation = () => {
                     </Link>
                     <a
                         target="_blank"
-                        href="https://drive.google.com/file/d/1YO9NydUxXD_8gvV6cSPo4rg69lbI5FA4/view"
+                        href="https://drive.google.com/file/d/1fg_JtIK0-IBcdxftLbMP6scFYMxkVn62/view"
                         className="nav-link"
                         id="resume-nav"
                     >
